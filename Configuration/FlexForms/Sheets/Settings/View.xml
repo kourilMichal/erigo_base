@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+	<sheets>
+		<list>
+			<ROOT>
+				<sheetTitle>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.sheet.view</sheetTitle>
+				<type>array</type>
+				<el>
+					<settings.view.layout_list>
+					    <label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.view.layout.list</label>
+					    <config>
+					        <type>select</type>
+					        <renderType>selectSingle</renderType>
+					        <default>default</default>
+					        <items type="array">
+					            <numIndex index="0" type="array">
+					                <label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.view.layout.default</label>
+					                <value>default</value>
+					            </numIndex>
+					            <numIndex index="1" type="array">
+					                <label>Obrázek vlevo</label>
+					                <value>imgleft</value>
+					            </numIndex>
+					            <numIndex index="2" type="array">
+					                <label>Rozšiřující šablona</label>
+					                <value>expander</value>
+					            </numIndex>
+					        </items>
+					    </config>
+					</settings.view.layout_list>
+
+					
+					<!-- New Checkbox for Perex -->
+					<settings.view.show_perex>
+						<label>zobrazit perex</label>
+						<config>
+							<type>check</type>
+							<default>0</default>
+						</config>
+					</settings.view.show_perex>
+					
+					<settings.view.show_tag_1>
+						<label>zobrazit bonusový prvek 1</label>
+						<config>
+							<type>check</type>
+							<default>0</default>
+						</config>
+					</settings.view.show_tag_1>
+					
+					<settings.view.show_tag_2>
+						<label>zobrazit bonusový prvek 2</label>
+						<config>
+							<type>check</type>
+							<default>0</default>
+						</config>
+					</settings.view.show_tag_2>
+
+					<!-- New Checkbox for Date -->
+					<settings.view.show_date>
+						<label>zobrazit datum</label>
+						<config>
+							<type>check</type>
+							<default>0</default>
+						</config>
+					</settings.view.show_date>
+					
+					<!-- New Checkbox for Date -->
+					<settings.view.show_morelink>
+						<label>zobrazit číst více odkaz</label>
+						<config>
+							<type>check</type>
+							<default>0</default>
+						</config>
+					</settings.view.show_morelink>
+					
+					<settings.view.columns>
+						<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.view.columns</label>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<default>2</default>
+							<items type="array">
+								<numIndex index="0" type="array">
+									<label>1</label>
+									<value>1</value>
+								</numIndex>
+								<numIndex index="1" type="array">
+									<label>2</label>
+									<value>2</value>
+								</numIndex>
+								<numIndex index="2" type="array">
+									<label>3</label>
+									<value>3</value>
+								</numIndex>
+								<numIndex index="3" type="array">
+									<label>4</label>
+									<value>4</value>
+								</numIndex>
+								<numIndex index="4" type="array">
+									<label>5</label>
+									<value>5</value>
+								</numIndex>
+								<numIndex index="5" type="array">
+									<label>6</label>
+									<value>6</value>
+								</numIndex>
+								<numIndex index="6" type="array">
+									<label>7</label>
+									<value>7</value>
+								</numIndex>
+								<numIndex index="7" type="array">
+									<label>8</label>
+									<value>8</value>
+								</numIndex>
+							</items>
+						</config>
+					</settings.view.columns>
+					
+					<settings.view.image_aspect_ratio_main>
+						<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.view.image_aspect_ratio.main</label>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<default>original</default>
+							<items type="array">
+								<numIndex index="0" type="array">
+									<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.view.image_aspect_ratio.no_image</label>
+									<value>no-image</value>
+								</numIndex>
+								<numIndex index="1" type="array">
+									<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.view.image_aspect_ratio.original</label>
+									<value>original</value>
+								</numIndex>
+								<numIndex index="2" type="array">
+									<label>16:9</label>
+									<value>16_9</value>
+								</numIndex>
+								<numIndex index="3" type="array">
+									<label>3:2</label>
+									<value>3_2</value>
+								</numIndex>
+								<numIndex index="4" type="array">
+									<label>4:3</label>
+									<value>4_3</value>
+								</numIndex>
+								<numIndex index="5" type="array">
+									<label>1:1</label>
+									<value>1_1</value>
+								</numIndex>
+								<numIndex index="6" type="array">
+									<label>3:4</label>
+									<value>3_4</value>
+								</numIndex>
+								<numIndex index="7" type="array">
+									<label>2:3</label>
+									<value>2_3</value>
+								</numIndex>
+								<numIndex index="8" type="array">
+									<label>9:16</label>
+									<value>9_16</value>
+								</numIndex>
+							</items>
+						</config>
+					</settings.view.image_aspect_ratio_main>
+				</el>
+			</ROOT>
+		</list>
+		
+		<detail>
+			<ROOT>
+				<sheetTitle>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.sheet.view</sheetTitle>
+				<type>array</type>
+				<el>
+					<settings.view.layout_detail>
+						<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.view.layout.detail</label>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<default>default</default>
+							<items type="array">
+								<numIndex index="0" type="array">
+									<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.view.layout.default</label>
+									<value>default</value>
+								</numIndex>
+								<numIndex index="1" type="array">
+					                <label>Obrázek vlevo + Obalený obsah</label>
+					                <value>newsletter</value>
+					            </numIndex>
+							</items>
+						</config>
+					</settings.view.layout_detail>
+					
+					 <settings.show_sliding>
+						<label>Přepínání mezi záznamy - detail</label>
+						<config>
+							<type>check</type>
+							<default>0</default>
+						</config>
+					</settings.show_sliding>
+					
+					<settings.show_related_cat>
+						<label>Související záznamy - kategorie</label>
+						<config>
+							<type>check</type>
+							<default>0</default>
+						</config>
+					</settings.show_related_cat>
+					
+					<settings.view.image_aspect_ratio_main>
+						<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.view.image_aspect_ratio.main</label>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<default>original</default>
+							<items type="array">
+								<numIndex index="0" type="array">
+									<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.view.image_aspect_ratio.no_image</label>
+									<value>no-image</value>
+								</numIndex>
+								<numIndex index="1" type="array">
+									<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.view.image_aspect_ratio.original</label>
+									<value>original</value>
+								</numIndex>
+								<numIndex index="2" type="array">
+									<label>16:9</label>
+									<value>16_9</value>
+								</numIndex>
+								<numIndex index="3" type="array">
+									<label>3:2</label>
+									<value>3_2</value>
+								</numIndex>
+								<numIndex index="4" type="array">
+									<label>4:3</label>
+									<value>4_3</value>
+								</numIndex>
+								<numIndex index="5" type="array">
+									<label>1:1</label>
+									<value>1_1</value>
+								</numIndex>
+								<numIndex index="6" type="array">
+									<label>3:4</label>
+									<value>3_4</value>
+								</numIndex>
+								<numIndex index="7" type="array">
+									<label>2:3</label>
+									<value>2_3</value>
+								</numIndex>
+								<numIndex index="8" type="array">
+									<label>9:16</label>
+									<value>9_16</value>
+								</numIndex>
+							</items>
+						</config>
+					</settings.view.image_aspect_ratio_main>
+					
+					
+					<settings.view.image_aspect_ratio_gallery>
+						<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.view.image_aspect_ratio.gallery</label>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<default>original</default>
+							<items type="array">
+								<numIndex index="0" type="array">
+									<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.view.image_aspect_ratio.no_image</label>
+									<value>no-image</value>
+								</numIndex>
+								<numIndex index="1" type="array">
+									<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.view.image_aspect_ratio.original</label>
+									<value>original</value>
+								</numIndex>
+								<numIndex index="2" type="array">
+									<label>16:9</label>
+									<value>16_9</value>
+								</numIndex>
+								<numIndex index="3" type="array">
+									<label>3:2</label>
+									<value>3_2</value>
+								</numIndex>
+								<numIndex index="4" type="array">
+									<label>4:3</label>
+									<value>4_3</value>
+								</numIndex>
+								<numIndex index="5" type="array">
+									<label>1:1</label>
+									<value>1_1</value>
+								</numIndex>
+								<numIndex index="6" type="array">
+									<label>3:4</label>
+									<value>3_4</value>
+								</numIndex>
+								<numIndex index="7" type="array">
+									<label>2:3</label>
+									<value>2_3</value>
+								</numIndex>
+								<numIndex index="8" type="array">
+									<label>9:16</label>
+									<value>9_16</value>
+								</numIndex>
+							</items>
+						</config>
+					</settings.view.image_aspect_ratio_gallery>
+					
+					<settings.view.columns_gallery>
+						<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.view.columns_gallery</label>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<default>2</default>
+							<items type="array">
+								<numIndex index="0" type="array">
+									<label>1</label>
+									<value>1</value>
+								</numIndex>
+								<numIndex index="1" type="array">
+									<label>2</label>
+									<value>2</value>
+								</numIndex>
+								<numIndex index="2" type="array">
+									<label>3</label>
+									<value>3</value>
+								</numIndex>
+								<numIndex index="3" type="array">
+									<label>4</label>
+									<value>4</value>
+								</numIndex>
+							</items>
+						</config>
+					</settings.view.columns_gallery>
+				</el>
+			</ROOT>
+		</detail>
+	</sheets>
+</T3DataStructure>

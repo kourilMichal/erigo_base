@@ -1,0 +1,247 @@
+################
+## Page title ##
+################
+
+config.pageTitleProviders {
+	plugin {
+		provider = Erigo\ErigoBase\PageTitle\PluginPageTitleProvider
+		before = seo
+	}
+}
+
+
+RTE.default.preset = default
+
+RTE.default {
+  preset = default
+}
+
+
+
+##########################
+## Page JS localization ##
+##########################
+
+page.inlineLanguageLabelFiles {
+	erigo_base = EXT:erigo_base/Resources/Private/Language/locallang.xlf
+	erigo_base.selectionPrefix = js
+}
+
+
+#############################
+## Plugin default settings ##
+#############################
+
+lib.pluginDefaultSettings {
+	emptyImageSrc = EXT:erigo_base/Resources/Public/Images/Empty.png
+		
+	list {
+		titleTag = h3
+		groupLabelTag = h2
+		filterHeadingTag = h2
+		mapHeadingTag = h2
+		
+		defaultItemsPerPage = 12
+		
+		emptyImageSrc < lib.pluginDefaultSettings.emptyImageSrc
+	}
+	
+	detail {
+		titleTag = h1
+		
+		lightbox {
+			enabled = 1
+			width = 1600
+			height = 1200
+			rel = lightbox-gallery
+		}
+		
+		mainImage {
+			showInGallery = 1
+			
+			lightbox < lib.pluginDefaultSettings.detail.lightbox
+			lightbox.enabled = 0
+		}
+		
+		emptyImageSrc < lib.pluginDefaultSettings.emptyImageSrc
+	}
+}
+
+
+####################
+## Plugin filters ##
+####################
+
+plugin.tx_erigobase {
+	filters.plugin {
+	}
+}
+
+
+##########
+## Libs ##
+##########
+
+lib.breakpoints {
+	settings {
+		xs = 0
+		sm = 576
+		md = 768
+		lg = 992
+		xl = 1200
+	}
+}
+
+lib.responsiveImages {
+	settings {
+		breakpoints {
+			default < lib.breakpoints.settings.xl
+			large < lib.breakpoints.settings.lg
+			medium < lib.breakpoints.settings.md
+			small < lib.breakpoints.settings.sm
+			extrasmall < lib.breakpoints.settings.xs
+		}
+			
+		containerWidths {
+		    default {
+		        outer = 2000
+		        inner = 2000
+		    }
+		    large {
+		        outer = 1200
+		        inner = 1200
+		    }
+		    medium {
+		        outer = 992
+		        inner = 992
+		    }
+		    small {
+		        outer = 768
+		        inner = 768
+		    }
+		    extrasmall {
+		        outer = 576
+		        inner = 576
+		    }
+		}
+		
+		itemWidths {
+		}
+		
+		enableLazyLoading = 1
+	}
+	
+	view {
+		templateName = Standalone/ResponsiveImages
+		
+		templateRootPaths {
+			0 = EXT:erigo_base/Resources/Private/Templates/
+		}
+		
+		partialRootPaths {
+			0 = EXT:erigo_base/Resources/Private/Partials/
+		}
+		
+		layoutRootPaths {
+			0 = EXT:erigo_base/Resources/Private/Layouts/
+		}
+	}
+}
+
+
+###################
+## Form antispam ##
+###################
+
+lib.antispam {
+	solutions {
+		100 {
+			className = Erigo\ErigoBase\Form\Antispam\Solution\GoogleRecaptchaV3
+			options {
+				siteKey = {$plugin.tx_erigobase.antispam.g_recaptcha_v3.siteKey}
+				secretKey = {$plugin.tx_erigobase.antispam.g_recaptcha_v3.secretKey}
+			}
+		}
+	}
+}
+
+page.includeJSFooterlibs {
+	eb_form = EXT:erigo_base/Resources/Public/JavaScript/form.js
+}
+
+page.jsInline {
+	32160 = TEXT
+	32160.value (
+		var ebFormCallbacks = {
+			afterSubmit: [],
+			beforeAjaxRequest: [],
+			onSuccess: [],
+			onError: [],
+			antispam: null
+		};
+	)
+}
+
+
+##################
+## Custom pages ##
+##################
+
+erigoAjaxPage = PAGE
+erigoAjaxPage {
+	typeNum = 3216000
+	
+	10 = USER_INT
+	10 {
+		userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+		vendorName = Erigo
+	}
+	
+	config {
+		disableAllHeaderCode = 1
+		xhtml_cleaning = 0
+		admPanel = 0
+		debug = 0
+		no_cache = 1
+	}
+}
+
+erigoApiPage < erigoAjaxPage
+erigoApiPage {
+	typeNum = 3216001
+}
+
+erigoAjaxContentPage < erigoAjaxPage
+erigoAjaxContentPage {
+	typeNum = 3216010
+	
+	10 >
+	10 = RECORDS
+	10 {
+		tables = tt_content
+		dontCheckPid = 1
+		source.data = GP:contentUid
+	}
+}
+
+erigoAjaxContentNoTemplatePage < erigoAjaxContentPage
+erigoAjaxContentNoTemplatePage {
+	typeNum = 3216011
+}
+
+
+
+
+
+#[getTSFE().type == 3216011]
+#	tempPluginContent < tt_content.list.20
+#	
+#	tt_content.list >
+#	tt_content.list = CASE
+#	tt_content.list < tempPluginContent
+#	tt_content.list {
+#		key.field = list_type
+#	}
+#	
+#	tempPluginContent >
+#[end]

@@ -1,0 +1,83 @@
+# Default RTE configuration for EXT:erigo_base
+editor:
+  config:
+    # Toolbar configuration
+    toolbar:
+      items:
+        - style              # Stylování textu
+        - heading            # Nadpisy
+        - '|'
+        - bold               # Tučné písmo
+        - italic             # Kurzíva
+        - subscript          # Dolní index
+        - superscript        # Horní index
+        - strikethrough      # Přeškrtnutí
+        - underline          # Podtržení
+        - '|'
+        - bulletedList       # Odrážky
+        - numberedList       # Číslované seznamy
+        - blockQuote         # Citace
+        - alignment          # Zarovnání textu
+        - '|'
+        - findAndReplace     # Vyhledat a nahradit
+        - link               # Odkazy
+        - '|'
+        - removeFormat       # Odstranit formátování
+        - undo               # Zpět
+        - redo               # Znovu
+        - '|'
+        - insertTable        # Vložit tabulku
+        - tableColumn        # Správa sloupců tabulky
+        - tableRow           # Správa řádků tabulky
+        - mergeTableCells    # Sloučení buněk
+        - tableProperties    # Vlastnosti tabulky
+        - tableCellProperties # Vlastnosti buněk
+        - toggleTableCaption # Přepnout popisek tabulky
+        - '|'
+        - specialCharacters  # Speciální znaky
+        - horizontalLine     # Vodorovná čára
+        - sourceEditing      # Úprava zdroje
+
+    # Configuration for headings
+    heading:
+      options:
+        - { model: 'paragraph', title: 'Paragraph' }
+        - { model: 'heading1', view: 'h1', title: 'Heading 1' }
+        - { model: 'heading2', view: 'h2', title: 'Heading 2' }
+        - { model: 'heading3', view: 'h3', title: 'Heading 3' }
+        - { model: 'formatted', view: 'pre', title: 'Preformatted Text' }
+
+    # Style definitions
+    style:
+      definitions:
+        - { name: "Lead", element: "p", classes: ['lead'] }
+        - { name: "Small", element: "small", classes: [] }
+        - { name: "Muted", element: "span", classes: ['text-muted'] }
+
+    # Text alignment configuration
+    alignment:
+      options:
+        - { name: 'left', className: 'text-left' }
+        - { name: 'center', className: 'text-center' }
+        - { name: 'right', className: 'text-right' }
+        - { name: 'justify', className: 'text-justify' }
+
+    # Table configuration
+    table:
+      defaultHeadings: { rows: 1 }
+      contentToolbar:
+        - tableColumn
+        - tableRow
+        - mergeTableCells
+        - tableProperties
+        - tableCellProperties
+        - toggleTableCaption
+
+    # Active plugins
+    plugins:
+      - table
+      - tableToolbar
+      - alignment
+      - link
+      - style
+      - specialCharacters

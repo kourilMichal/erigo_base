@@ -1,0 +1,14 @@
+# customcategory=erigo_base_antispam=Antispam solutions
+# customsubcategory=110_eb_g_recaptcha_v3=Google reCAPTCHA v3
+
+plugin.tx_erigobase {
+	antispam {
+		g_recaptcha_v3 {
+			# cat=erigo_base_antispam/110_eb_g_recaptcha_v3/10; type=string; label=Site key
+			siteKey = 
+			
+			# cat=erigo_base_antispam/110_eb_g_recaptcha_v3/20; type=string; label=Secret key
+			secretKey = 
+		}
+	}
+}

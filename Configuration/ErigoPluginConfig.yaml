@@ -1,0 +1,4 @@
+fluid:
+  rootPaths:
+    ContentElements:
+      - { tsKey: 'lib.responsiveImages.view' }

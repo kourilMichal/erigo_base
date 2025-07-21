@@ -1,0 +1,20 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Erigo\ErigoBase\:
+    resource: '../Classes/*'
+    exclude:
+      - '../Classes/Domain/Model/*'
+      - '../Classes/Filter/FilterValue.php'
+      - '../Classes/Utility/*'
+
+  Erigo\ErigoBase\Service\ImageService: ~
+  Erigo\ErigoBase\Service\ImageServiceInterface: '@Erigo\ErigoBase\Service\ImageService'
+
+  Erigo\ErigoBase\EventListener\FlexForm\SheetImport:
+    tags:
+      - name: event.listener
+        identifier: 'erigo_base/flex-form-sheet-import'

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<type>array</type>
+				<el>
+					<fieldsMode>
+						<TCEforms>
+							<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:tt_content_filter.settings.fields_mode</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0" type="array">
+										<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:tt_content_filter.settings.fields_mode.all</label>
+										<value>all</value>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:tt_content_filter.settings.fields_mode.selected</label>
+										<value>selected</value>
+									</numIndex>
+								</items>
+								<default>all</default>
+							</config>
+						</TCEforms>
+					</fieldsMode>
+					
+					<selectedFields>
+						<TCEforms>
+							<displayCond><![CDATA[FIELD:fieldsMode:=:selected]]></displayCond>
+							<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:tt_content_filter.settings.selected_fields</label>
+							<config>
+								<type>select</type>
+								<renderType>selectSingleBox</renderType>
+								<itemsProcFunc>Erigo\ErigoBase\TCA\FilterHelper->getOptionsForSelect</itemsProcFunc>
+								<minitems>1</minitems>
+							</config>
+						</TCEforms>
+					</selectedFields>
+					
+					<placeholder>
+						<TCEforms>
+							<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:tt_content_filter.settings.placeholder</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</placeholder>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

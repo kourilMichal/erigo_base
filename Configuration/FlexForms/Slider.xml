@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:settings</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <effect>
+                        <TCEforms>
+                            <label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.slider.effect</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <default>slide</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.slider.effect.slide</label>
+                                        <value>slide</value>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.slider.effect.fade</label>
+                                        <value>fade</value>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </effect>
+                    
+					<navigation>
+						<TCEforms>
+							<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.slider.navigation</label>
+							<config>
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</navigation>
+                    
+					<pagination>
+						<TCEforms>
+							<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.slider.pagination</label>
+							<config>
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</pagination>
+                    
+					<autoplay>
+						<TCEforms>
+							<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.slider.autoplay</label>
+							<config>
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</autoplay>
+					
+					<thumbs>
+						<TCEforms>
+							<label>Přepínání s obrázky</label>
+							<config>
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</thumbs>
+					
+					<autoplaySpeed>
+						<TCEforms>
+							<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.slider.autoplay_speed</label>
+							<config>
+								<type>number</type>
+								<size>5</size>
+								<default>3000</default>
+								<range>
+									<lower>100</lower>
+									<upper>10000</upper>
+								</range>
+								<slider>
+									<step>100</step>
+									<width>200</width>
+								</slider>
+							</config>
+						</TCEforms>
+					</autoplaySpeed>
+					
+					<transitionSpeed>
+						<TCEforms>
+							<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.slider.transition_speed</label>
+							<config>
+								<type>number</type>
+								<size>5</size>
+								<default>300</default>
+								<range>
+									<lower>100</lower>
+									<upper>2000</upper>
+								</range>
+								<slider>
+									<step>10</step>
+									<width>200</width>
+								</slider>
+							</config>
+						</TCEforms>
+					</transitionSpeed>
+                    
+					<infinite>
+						<TCEforms>
+							<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.slider.infinite</label>
+							<config>
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</infinite>
+                    
+					<autoheight>
+						<TCEforms>
+							<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.slider.autoheight</label>
+							<config>
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</autoheight>
+					
+                    <slideBehavior>
+                        <TCEforms>
+                            <label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.slider.slide_behavior</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <default>group</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.slider.slide_behavior.group</label>
+                                        <value>group</value>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.slider.slide_behavior.one</label>
+                                        <value>one</value>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </slideBehavior>
+					
+					<additionalConfiguration>
+						<TCEforms>
+							<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.slider.additional_configuration</label>
+							<config>
+								<type>text</type>
+								<eval>trim</eval>
+								<rows>10</rows>
+								<cols>50</cols>
+								<wrap>off</wrap>
+								<fixedFont>true</fixedFont>
+								<enableTabulator>true</enableTabulator>
+							</config>
+						</TCEforms>
+					</additionalConfiguration>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

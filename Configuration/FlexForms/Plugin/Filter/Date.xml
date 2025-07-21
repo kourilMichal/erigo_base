@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<type>array</type>
+				<el>
+					<type>
+						<TCEforms>
+							<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:tca.field.type</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0" type="array">
+										<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:tt_content_filter.settings.type.date</label>
+										<value>date</value>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:tt_content_filter.settings.type.years</label>
+										<value>years</value>
+									</numIndex>
+								</items>
+								<default>date</default>
+							</config>
+						</TCEforms>
+					</type>
+					
+					<formElement>
+						<TCEforms>
+							<displayCond><![CDATA[FIELD:type:IN:years]]></displayCond>
+							<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:tt_content_filter.settings.form_element</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0" type="array">
+										<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:tt_content_filter.settings.form_element.select</label>
+										<value>select</value>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:tt_content_filter.settings.form_element.multiselect</label>
+										<value>multiselect</value>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:tt_content_filter.settings.form_element.checkboxes</label>
+										<value>checkboxes</value>
+									</numIndex>
+								</items>
+								<default>select</default>
+							</config>
+						</TCEforms>
+					</formElement>
+					
+					<sortDir>
+						<TCEforms>
+							<displayCond><![CDATA[FIELD:type:IN:years]]></displayCond>
+							<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:flexform.list.sort_dir</label>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0" type="array">
+										<label>LLL:EXT:core/Resources/Private/Language/locallang_common.xlf:ascending</label>
+										<value>asc</value>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<label>LLL:EXT:core/Resources/Private/Language/locallang_common.xlf:descending</label>
+										<value>desc</value>
+									</numIndex>
+								</items>
+								<default>desc</default>
+							</config>
+						</TCEforms>
+					</sortDir>
+					
+					<defaultOptionLabel>
+						<TCEforms>
+							<displayCond>
+								<and>
+									<value1><![CDATA[FIELD:type:IN:years]]></value1>
+									<value2><![CDATA[FIELD:formElement:IN:select]]></value2>
+								</and>
+							</displayCond>
+							<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:tt_content_filter.settings.default_option_label</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</defaultOptionLabel>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

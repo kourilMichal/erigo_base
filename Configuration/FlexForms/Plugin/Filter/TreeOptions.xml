@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<type>array</type>
+				<el>
+					<formElement>
+						<TCEforms>
+							<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:tt_content_filter.settings.form_element</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0" type="array">
+										<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:tt_content_filter.settings.form_element.select</label>
+										<value>select</value>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:tt_content_filter.settings.form_element.multiselect</label>
+										<value>multiselect</value>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:tt_content_filter.settings.form_element.checkboxes</label>
+										<value>checkboxes</value>
+									</numIndex>
+								</items>
+								<default>select</default>
+							</config>
+						</TCEforms>
+					</formElement>
+					
+					<optionsMode>
+						<TCEforms>
+							<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:tt_content_filter.settings.options_mode</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0" type="array">
+										<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:tt_content_filter.settings.options_mode.all</label>
+										<value>all</value>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:tt_content_filter.settings.options_mode.selected</label>
+										<value>selected</value>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:tt_content_filter.settings.options_mode.children</label>
+										<value>children</value>
+									</numIndex>
+								</items>
+								<default>all</default>
+							</config>
+						</TCEforms>
+					</optionsMode>
+					
+					<selectedOptions>
+						<TCEforms>
+							<displayCond><![CDATA[FIELD:optionsMode:=:selected]]></displayCond>
+							<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:tt_content_filter.settings.selected_options</label>
+							<config>
+								<type>select</type>
+								<renderType>selectSingleBox</renderType>
+								<itemsProcFunc>Erigo\ErigoBase\TCA\FilterHelper->getOptionsForSelect</itemsProcFunc>
+								<minitems>1</minitems>
+								<size>10</size>
+							</config>
+						</TCEforms>
+					</selectedOptions>
+					
+					<parentOption>
+						<TCEforms>
+							<displayCond><![CDATA[FIELD:optionsMode:=:children]]></displayCond>
+							<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:tt_content_filter.settings.parent_option</label>
+							<config>
+								<type>select</type>
+								<renderType>selectSingle</renderType>
+								<itemsProcFunc>Erigo\ErigoBase\TCA\FilterHelper->getOptionsForSelect</itemsProcFunc>
+								<minitems>1</minitems>
+								<size>10</size>
+							</config>
+						</TCEforms>
+					</parentOption>
+					
+					<defaultOptionLabel>
+						<TCEforms>
+							<displayCond><![CDATA[FIELD:formElement:IN:select]]></displayCond>
+							<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:tt_content_filter.settings.default_option_label</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</defaultOptionLabel>
+					
+					<useJsPlugin>
+						<TCEforms>
+							<displayCond><![CDATA[FIELD:formElement:IN:select,multiselect]]></displayCond>
+							<onChange>reload</onChange>
+							<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:tt_content_filter.settings.use_js_plugin</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</useJsPlugin>
+					
+					<placeholder>
+						<TCEforms>
+							<displayCond>
+								<and>
+									<value1><![CDATA[FIELD:formElement:IN:select,multiselect]]></value1>
+									<value2><![CDATA[FIELD:useJsPlugin:REQ:true]]></value2>
+								</and>
+							</displayCond>
+							<label>LLL:EXT:erigo_base/Resources/Private/Language/locallang_be.xlf:tt_content_filter.settings.placeholder</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</placeholder>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>
