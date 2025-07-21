@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-01-07T11:21:51Z" product-name="erigo_base">
+		<header/>
+		<body>
+			<trans-unit id="tca.field.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tca.field.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tca.field.clients">
+				<source>Clients</source>
+			</trans-unit>
+			<trans-unit id="tca.field.subtitle">
+				<source>Subtitle</source>
+			</trans-unit>
+			<trans-unit id="tca.field.perex">
+				<source>Perex</source>
+			</trans-unit>
+			<trans-unit id="tca.field.text">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="tca.field.color">
+				<source>Color</source>
+			</trans-unit>
+			<trans-unit id="tca.field.categories">
+				<source>Categories</source>
+			</trans-unit>
+			<trans-unit id="tca.field.params">
+				<source>Parameters</source>
+			</trans-unit>
+			<trans-unit id="tca.field.images">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tca.field.files">
+				<source>Files</source>
+			</trans-unit>
+			<trans-unit id="tca.field.videos">
+				<source>Videos</source>
+			</trans-unit>
+			<trans-unit id="tca.field.tags">
+				<source>Tags</source>
+			</trans-unit>
+			<trans-unit id="tca.field.layout">
+				<source>Layout</source>
+			</trans-unit>
+			<trans-unit id="tca.field.layout.default">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="tca.field.meta_title">
+				<source>Meta title</source>
+			</trans-unit>
+			<trans-unit id="tca.field.meta_keywords">
+				<source>Meta keywords</source>
+			</trans-unit>
+			<trans-unit id="tca.field.meta_description">
+				<source>Meta description</source>
+			</trans-unit>
+			<trans-unit id="tca.field.gps_latitude">
+				<source>GPS Latitude</source>
+			</trans-unit>
+			<trans-unit id="tca.field.gps_longitude">
+				<source>GPS Longitude</source>
+			</trans-unit>
+			<trans-unit id="tca.field.external_url">
+				<source>External URL</source>
+			</trans-unit>
+			<trans-unit id="tca.field.import_id">
+				<source>Import ID</source>
+			</trans-unit>
+			<trans-unit id="tca.field.import_source">
+				<source>Import source</source>
+			</trans-unit>
+			<trans-unit id="tca.field.synch_history">
+				<source>Synchronization history</source>
+			</trans-unit>
+			<trans-unit id="tca.field.synch_history.type.import">
+				<source>IMPORT</source>
+			</trans-unit>
+			<trans-unit id="tca.field.synch_history.type.export">
+				<source>EXPORT</source>
+			</trans-unit>
+			<trans-unit id="tca.field.synch_history.action.join">
+				<source>Join</source>
+			</trans-unit>
+			<trans-unit id="tca.field.synch_history.action.create">
+				<source>Create</source>
+			</trans-unit>
+			<trans-unit id="tca.field.synch_history.action.update">
+				<source>Update</source>
+			</trans-unit>
+			<trans-unit id="tca.field.synch_history.action.delete">
+				<source>Delete</source>
+			</trans-unit>
+			<trans-unit id="tca.field.synch_history.action.restore">
+				<source>Restore</source>
+			</trans-unit>
+			
+			<trans-unit id="tca.field.email.sender">
+				<source>Sender email</source>
+			</trans-unit>
+			<trans-unit id="tca.field.email.sender_name">
+				<source>Sender name</source>
+			</trans-unit>
+			<trans-unit id="tca.field.email.recipients">
+				<source>Recipients</source>
+			</trans-unit>
+			<trans-unit id="tca.field.email.subject">
+				<source>Subject</source>
+			</trans-unit>
+			<trans-unit id="tca.field.email.heading">
+				<source>Heading</source>
+			</trans-unit>
+			<trans-unit id="tca.field.email.text_above">
+				<source>Text above</source>
+			</trans-unit>
+			<trans-unit id="tca.field.email.text_below">
+				<source>Text below</source>
+			</trans-unit>
+			
+			<trans-unit id="tca.tab.params">
+				<source>Parameters</source>
+			</trans-unit>
+			<trans-unit id="tca.tab.media">
+				<source>Media</source>
+			</trans-unit>
+			<trans-unit id="tca.tab.texts">
+				<source>Texts</source>
+			</trans-unit>
+			<trans-unit id="tca.tab.relations">
+				<source>Relations</source>
+			</trans-unit>
+			<trans-unit id="tca.tab.seo">
+				<source>Seo</source>
+			</trans-unit>
+			<trans-unit id="tca.tab.synch">
+				<source>Synchronization</source>
+			</trans-unit>
+			
+			<trans-unit id="tca.desc.line_separated">
+				<source>each on a new line</source>
+			</trans-unit>
+			<trans-unit id="tca.placeholder.use_default_value">
+				<source>(use the default value)</source>
+			</trans-unit>
+		
+			<trans-unit id="flexform.sheet.general">
+				<source>General</source>
+			</trans-unit>
+			<trans-unit id="flexform.sheet.list">
+				<source>List settings</source>
+			</trans-unit>
+			<trans-unit id="flexform.sheet.map">
+				<source>Map</source>
+			</trans-unit>
+			<trans-unit id="flexform.sheet.constraints">
+				<source>Constraints</source>
+			</trans-unit>
+			<trans-unit id="flexform.sheet.filter">
+				<source>Filter</source>
+			</trans-unit>
+			<trans-unit id="flexform.sheet.slider">
+				<source>Slider</source>
+			</trans-unit>
+			<trans-unit id="flexform.sheet.view">
+				<source>View</source>
+			</trans-unit>
+			<trans-unit id="flexform.sheet.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="flexform.sheet.form">
+				<source>Form</source>
+			</trans-unit>
+			
+			<trans-unit id="flexform.list_pid">
+				<source>List page</source>
+			</trans-unit>
+			<trans-unit id="flexform.detail_pid">
+				<source>Detail page</source>
+			</trans-unit>
+			<trans-unit id="flexform.heading">
+				<source>Heading</source>
+			</trans-unit>
+			
+			<trans-unit id="flexform.list.show_pagination">
+				<source>Show pagination</source>
+			</trans-unit>
+			<trans-unit id="flexform.list.items_per_page">
+				<source>Items per page</source>
+			</trans-unit>
+			<trans-unit id="flexform.list.limit">
+				<source>Limit</source>
+			</trans-unit>
+			<trans-unit id="flexform.list.sort_field">
+				<source>Sort by</source>
+			</trans-unit>
+			<trans-unit id="flexform.list.sort_field.sorting">
+				<source>Sorting</source>
+			</trans-unit>
+			<trans-unit id="flexform.list.sort_field.crdate">
+				<source>Creation date</source>
+			</trans-unit>
+			<trans-unit id="flexform.list.sort_dir">
+				<source>Sort direction</source>
+			</trans-unit>
+			<trans-unit id="flexform.list.sort_dir.rand">
+				<source>Random</source>
+			</trans-unit>
+			<trans-unit id="flexform.list.group_by">
+				<source>Group by</source>
+			</trans-unit>
+			<trans-unit id="flexform.list.group_by.categories">
+				<source>Categories</source>
+			</trans-unit>
+			<trans-unit id="flexform.list.group_by.first_letter">
+				<source>First letter</source>
+			</trans-unit>
+			<trans-unit id="flexform.list.group_by_dir">
+				<source>Sort direction of groups</source>
+			</trans-unit>
+			<trans-unit id="flexform.list.empty_result_text">
+				<source>Empty result text</source>
+			</trans-unit>
+			
+			<trans-unit id="flexform.map.show">
+				<source>Show map</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.uid">
+				<source>Selected map</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.position">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.position.above">
+				<source>Above list</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.position.below">
+				<source>Below list</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.position.map_only">
+				<source>Map only</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.marker.is_link">
+				<source>Marker is link</source>
+			</trans-unit>
+			<trans-unit id="flexform.map.marker.hover_image">
+				<source>Marker image on mouse over</source>
+			</trans-unit>
+			
+			<trans-unit id="flexform.filter.show">
+				<source>Show filter</source>
+			</trans-unit>
+			<trans-unit id="flexform.filter.pid">
+				<source>Results page</source>
+			</trans-unit>
+			<trans-unit id="flexform.filter.items">
+				<source>Filter items</source>
+			</trans-unit>
+			<trans-unit id="flexform.filter.submit_type">
+				<source>Submit type</source>
+			</trans-unit>
+			<trans-unit id="flexform.filter.submit_type.button">
+				<source>Submit button</source>
+			</trans-unit>
+			<trans-unit id="flexform.filter.submit_type.on_change">
+				<source>Automatically on change</source>
+			</trans-unit>
+			<trans-unit id="flexform.filter.submit_button_label">
+				<source>Submit button label</source>
+			</trans-unit>
+			
+			<trans-unit id="flexform.slider.show">
+				<source>Show slider</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.effect">
+				<source>Effect</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.effect.slide">
+				<source>Slide</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.effect.fade">
+				<source>Fade</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.navigation">
+				<source>Show navigation (arrows)</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.pagination">
+				<source>Show pagination (dots)</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.autoplay">
+				<source>Enable autoplay</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.autoplay_speed">
+				<source>Autoplay speed</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.transition_speed">
+				<source>Transition speed</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.infinite">
+				<source>Enable infinite loop</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.autoheight">
+				<source>Enable automatic height</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.slide_behavior">
+				<source>Slide behavior</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.slide_behavior.group">
+				<source>By group</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.slide_behavior.one">
+				<source>One by one</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.additional_configuration">
+				<source>Additional configuration</source>
+			</trans-unit>
+			
+			<trans-unit id="flexform.view.layout.list">
+				<source>List layout</source>
+			</trans-unit>
+			<trans-unit id="flexform.view.layout_list.name_only">
+				<source>Name only</source>
+			</trans-unit>
+			<trans-unit id="flexform.view.layout_list.image_only">
+				<source>Image only</source>
+			</trans-unit>
+			<trans-unit id="flexform.view.layout.detail">
+				<source>Detail layout</source>
+			</trans-unit>
+			<trans-unit id="flexform.view.layout_detail.image_gallery">
+				<source>Image gallery</source>
+			</trans-unit>
+			<trans-unit id="flexform.view.layout.default">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="flexform.view.columns">
+				<source>Columns</source>
+			</trans-unit>
+			<trans-unit id="flexform.view.columns_gallery">
+				<source>Columns in gallery</source>
+			</trans-unit>
+			<trans-unit id="flexform.view.image_aspect_ratio">
+				<source>Image aspect ratio</source>
+			</trans-unit>
+			<trans-unit id="flexform.view.image_aspect_ratio.main">
+				<source>Main image aspect ratio</source>
+			</trans-unit>
+			<trans-unit id="flexform.view.image_aspect_ratio.gallery">
+				<source>Gallery images aspect ratio</source>
+			</trans-unit>
+			<trans-unit id="flexform.view.image_aspect_ratio.no_image">
+				<source>No image</source>
+			</trans-unit>
+			<trans-unit id="flexform.view.image_aspect_ratio.original">
+				<source>Original</source>
+			</trans-unit>
+			
+			<trans-unit id="backend.content_info.switch_to_page">
+				<source>Switch to this page</source>
+			</trans-unit>
+			<trans-unit id="backend.content_info.missing_record">
+				<source>Missing record</source>
+			</trans-unit>
+			<trans-unit id="backend.content_info.plugin.restrictions">
+				<source>Record restrictions</source>
+			</trans-unit>
+			<trans-unit id="backend.content_info.plugin.view.no_main_image">
+				<source>No main image</source>
+			</trans-unit>
+			<trans-unit id="backend.content_info.plugin.view.no_gallery_images">
+				<source>No gallery images</source>
+			</trans-unit>
+		
+			<trans-unit id="sys_param">
+				<source>Parameter</source>
+			</trans-unit>
+			<trans-unit id="sys_param.type.text">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="sys_param.type.number">
+				<source>Number</source>
+			</trans-unit>
+			<trans-unit id="sys_param.type.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="sys_param.type.boolean">
+				<source>Yes / no</source>
+			</trans-unit>
+			<trans-unit id="sys_param.type.options">
+				<source>Options</source>
+			</trans-unit>
+			<trans-unit id="sys_param.input_mode">
+				<source>Input mode</source>
+			</trans-unit>
+			<trans-unit id="sys_param.input_mode.input">
+				<source>Input field</source>
+			</trans-unit>
+			<trans-unit id="sys_param.input_mode.textarea">
+				<source>Text area</source>
+			</trans-unit>
+			<trans-unit id="sys_param.input_mode.rte">
+				<source>Rich Text Editor</source>
+			</trans-unit>
+			<trans-unit id="sys_param.input_mode.integer">
+				<source>Integer</source>
+			</trans-unit>
+			<trans-unit id="sys_param.input_mode.decimal">
+				<source>Decimal</source>
+			</trans-unit>
+			<trans-unit id="sys_param.input_mode.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="sys_param.input_mode.datetime">
+				<source>Date and time</source>
+			</trans-unit>
+			<trans-unit id="sys_param.input_mode.time">
+				<source>Time</source>
+			</trans-unit>
+			<trans-unit id="sys_param.input_mode.select">
+				<source>Drop-down menu</source>
+			</trans-unit>
+			<trans-unit id="sys_param.input_mode.multiselect">
+				<source>Multiple selection</source>
+			</trans-unit>
+			<trans-unit id="sys_param.input_mode.radio">
+				<source>Radio button</source>
+			</trans-unit>
+			<trans-unit id="sys_param.input_mode.checkbox">
+				<source>Check boxes</source>
+			</trans-unit>
+			<trans-unit id="sys_param.options">
+				<source>Options</source>
+			</trans-unit>
+			<trans-unit id="sys_param.options.add_button">
+				<source>Add option</source>
+			</trans-unit>
+			<trans-unit id="sys_param.unit">
+				<source>Unit</source>
+			</trans-unit>
+			<trans-unit id="sys_param.default_value">
+				<source>Default value</source>
+			</trans-unit>
+			<trans-unit id="sys_param.default_value.add_button">
+				<source>Add default value</source>
+			</trans-unit>
+			
+			<trans-unit id="sys_param_group">
+				<source>Parameter group</source>
+			</trans-unit>
+			<trans-unit id="sys_param_group.params">
+				<source>Parameters</source>
+			</trans-unit>
+			
+			<trans-unit id="sys_param_option">
+				<source>Option</source>
+			</trans-unit>
+			<trans-unit id="sys_param_option.is_checked">
+				<source>Is checked</source>
+			</trans-unit>
+			
+			<trans-unit id="sys_param_value">
+				<source>Parameter value</source>
+			</trans-unit>
+			<trans-unit id="sys_param_value.value">
+				<source>Value</source>
+			</trans-unit>
+			<trans-unit id="sys_param_value.value.empty">
+				<source>[empty value]</source>
+			</trans-unit>
+			
+			<trans-unit id="tt_content_filter">
+				<source>Filter item</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.property">
+				<source>Property</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.type.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.type.years">
+				<source>Years</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings">
+				<source>Settings</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.form_element">
+				<source>Form element</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.form_element.select">
+				<source>Select</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.form_element.multiselect">
+				<source>Multiselect</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.form_element.checkboxes">
+				<source>Checkboxes</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.form_element.radio">
+				<source>Radio</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.form_element.number">
+				<source>Number</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.form_element.text">
+				<source>Input field</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.options_mode">
+				<source>Filter options</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.options_mode.all">
+				<source>All</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.options_mode.selected">
+				<source>Only selected</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.options_mode.children">
+				<source>Only children</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.fields_mode">
+				<source>Filter fields</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.fields_mode.all">
+				<source>All</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.fields_mode.selected">
+				<source>Only selected</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.selected_options">
+				<source>Selected options</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.selected_fields">
+				<source>Selected fields</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.parent_option">
+				<source>Parent option</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.default_option_label">
+				<source>Default option label</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.use_js_plugin">
+				<source>Use javascript plugin</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.placeholder">
+				<source>Placeholder</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.step">
+				<source>Step</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.range_type">
+				<source>Range type</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.range_type.all_values">
+				<source>All values</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.range_type.manual">
+				<source>Manually entered</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.range_type.auto">
+				<source>Automatic</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.range_type.above_only">
+				<source>Restricted from above only</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.range_type.below_only">
+				<source>Restricted from below only</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.ranges">
+				<source>Ranges</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.ranges.desc">
+				<source>separate numbers in the range with dashes, separate individual items with commas [example: -100,100-200,200-]</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.min_step">
+				<source>Min. step</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.max_items">
+				<source>Max. number of items</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.different_interval_boundaries">
+				<source>Different interval boundaries</source>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.min_value">
+				<source>Min. value</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,75 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"  
+	  data-namespace-typo3-fluid="true">
+
+<f:if condition="{settings.filter.heading}">
+	<{settings.list.filterHeadingTag}>{settings.filter.heading}</{settings.list.filterHeadingTag}>
+</f:if>
+
+<f:form pageUid="{settings.filter.pid}" extensionName="{extensionName}" pluginName="{pluginName}" controller="{controller}" action="{action}" arguments="{arguments}" additionalParams="{additionalParams}" section="{contentObjectData.uid}">
+	<div class="filter-items">
+		<ol>
+			<f:for each="{filters}" as="filter">
+				<f:alias map="{fieldId:'filter-item-{filter.item.slug}-c{contentObjectData.uid}'}">
+				
+				<li class="filter-item filter-item-{filter.item.slug} filter-type-{filter.formElement}">
+					<f:if condition="{filter.item.title}">
+						<label for="{fieldId}">{filter.item.title}</label>
+					</f:if>
+					
+					<f:switch expression="{filter.formElement}">
+						<f:defaultCase>
+							<f:render partial="Filter/{filter.formElement -> f:format.case(mode:'capital')}" arguments="{filter:filter, value:'{filterValues.{filter.item.slug}.value}', fieldPrefix:fieldPrefix, fieldId:fieldId}" />
+						</f:defaultCase>
+					</f:switch>
+				</li>
+				
+				</f:alias>
+			</f:for>
+		</ol>
+	</div>
+	
+	<div class="filter-actions {f:if(condition:'{settings.filter.submitType} == \'onChange\'', then:'d-none')}">
+		<f:form.button class="btn btn-primary">
+			<f:if condition="{settings.filter.submitButtonLabel}">
+				<f:then>{settings.filter.submitButtonLabel}</f:then>
+				<f:else><f:translate key="action.filter" extensionName="ErigoBase" /></f:else>
+			</f:if>
+		</f:form.button>
+	</div>
+</f:form>
+
+<f:if condition="{settings.filter.submitType} == 'onChange'">
+	<script>
+		const filterFormElement_{contentObjectData.uid} = document.querySelector('#c{contentObjectData.uid} .plugin-filter form');
+		const filterSelectElements_{contentObjectData.uid} = document.querySelectorAll('#c{contentObjectData.uid} .plugin-filter select');
+		const filterCheckboxElements_{contentObjectData.uid} = document.querySelectorAll('#c{contentObjectData.uid} .plugin-filter .filter-type-checkboxes input');
+		const filterRadioElements_{contentObjectData.uid} = document.querySelectorAll('#c{contentObjectData.uid} .plugin-filter .filter-type-radio input');
+		const filterInputElements_{contentObjectData.uid} = document.querySelectorAll('#c{contentObjectData.uid} .plugin-filter .filter-type-text input');
+		
+		filterSelectElements_{contentObjectData.uid}.forEach((filterSelectElement) => {
+			filterSelectElement.addEventListener('change', (event) => {
+				filterFormElement_{contentObjectData.uid}.submit();
+			});
+		});
+		
+		filterCheckboxElements_{contentObjectData.uid}.forEach((filterCheckboxElement) => {
+			filterCheckboxElement.addEventListener('click', (event) => {
+				filterFormElement_{contentObjectData.uid}.submit();
+			});
+		});
+		
+		filterRadioElements_{contentObjectData.uid}.forEach((filterRadioElement) => {
+			filterRadioElement.addEventListener('click', (event) => {
+				filterFormElement_{contentObjectData.uid}.submit();
+			});
+		});
+		
+		filterInputElements_{contentObjectData.uid}.forEach((filterInputElement) => {
+			filterInputElement.addEventListener('change', (event) => {
+				filterFormElement_{contentObjectData.uid}.submit();
+			});
+		});
+	</script>
+</f:if>
+
+</html>

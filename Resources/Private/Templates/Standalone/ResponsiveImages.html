@@ -1,0 +1,24 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"  
+	  xmlns:eb="http://typo3.org/ns/Erigo/ErigoBase/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
+<f:for each="{images}" as="image">
+	<picture>
+		<f:for each="{image.variants}" key="name" as="variant">
+			<f:variable name="mediaQuery">{f:if(condition:'{variant.breakpoint} > 0', then:'media="(min-width:{variant.breakpoint}px)"')}</f:variable>
+			<f:variable name="variantUrl">{f:uri.image(image:image.file, cropVariant:name, maxWidth:variant.width)}</f:variable>
+			
+			<eb:resource.isFile filePath="{variantUrl}.webp">
+				<source data-variant="{name}" data-maxwidth="{variant.width}" {mediaQuery -> f:format.raw()} srcset="{variantUrl}.webp 1x" type="image/webp">
+			</eb:resource.isFile>
+			
+			<eb:resource.isFile filePath="{variantUrl}">
+				<source data-variant="{name}" data-maxwidth="{variant.width}" {mediaQuery -> f:format.raw()} srcset="{variantUrl} 1x" type="{image.file.properties.mime_type}">
+			</eb:resource.isFile>
+		</f:for>
+		
+		<img {f:if(condition:enableLazyLoading, then:'loading="lazy"')} src="{f:uri.image(image:image.file, cropVariant:'default', maxWidth:variants.default.width)}" title="{image.file.properties.title}" alt="{f:if(condition:image.file.properties.alternative, then:image.file.properties.alternative, else:image.file.properties.description)}">
+	</picture>
+</f:for>
+
+</html>

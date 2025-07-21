@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="cs" datatype="plaintext" original="messages" date="2020-01-07T11:21:51Z" product-name="erigo_base">
+		<header/>
+		<body>
+			<trans-unit id="tca.field.type">
+				<source>Type</source>
+				<target>Typ</target>
+			</trans-unit>
+			<trans-unit id="tca.field.date">
+				<source>Date</source>
+				<target>Datum</target>
+			</trans-unit>
+			<trans-unit id="tca.field.clients">
+				<source>Clients</source>
+				<target>Klienti</target>
+			</trans-unit>
+			<trans-unit id="tca.field.subtitle">
+				<source>Subtitle</source>
+				<target>Podnázev</target>
+			</trans-unit>
+			<trans-unit id="tca.field.perex">
+				<source>Perex</source>
+				<target>Perex</target>
+			</trans-unit>
+			<trans-unit id="tca.field.text">
+				<source>Text</source>
+				<target>Text</target>
+			</trans-unit>
+			<trans-unit id="tca.field.color">
+				<source>Color</source>
+				<target>Barva</target>
+			</trans-unit>
+			<trans-unit id="tca.field.categories">
+				<source>Categories</source>
+				<target>Kategorie</target>
+			</trans-unit>
+			<trans-unit id="tca.field.params">
+				<source>Parameters</source>
+				<target>Parametry</target>
+			</trans-unit>
+			<trans-unit id="tca.field.images">
+				<source>Images</source>
+				<target>Obrázky</target>
+			</trans-unit>
+			<trans-unit id="tca.field.files">
+				<source>Files</source>
+				<target>Soubory</target>
+			</trans-unit>
+			<trans-unit id="tca.field.videos">
+				<source>Videos</source>
+				<target>Videa</target>
+			</trans-unit>
+			<trans-unit id="tca.field.tags">
+				<source>Tags</source>
+				<target>Štítky</target>
+			</trans-unit>
+			<trans-unit id="tca.field.layout">
+				<source>Layout</source>
+				<target>Rozvržení</target>
+			</trans-unit>
+			<trans-unit id="tca.field.layout.default">
+				<source>Default</source>
+				<target>Základní</target>
+			</trans-unit>
+			<trans-unit id="tca.field.meta_title">
+				<source>Meta title</source>
+				<target>Meta title</target>
+			</trans-unit>
+			<trans-unit id="tca.field.meta_keywords">
+				<source>Meta keywords</source>
+				<target>Meta keywords</target>
+			</trans-unit>
+			<trans-unit id="tca.field.meta_description">
+				<source>Meta description</source>
+				<target>Meta description</target>
+			</trans-unit>
+			<trans-unit id="tca.field.gps_latitude">
+				<source>GPS Latitude</source>
+				<target>GPS zem. šířka (latitude)</target>
+			</trans-unit>
+			<trans-unit id="tca.field.gps_longitude">
+				<source>GPS Longitude</source>
+				<target>GPS zem. délka (longitude)</target>
+			</trans-unit>
+			<trans-unit id="tca.field.external_url">
+				<source>External URL</source>
+				<target>Externí URL</target>
+			</trans-unit>
+			<trans-unit id="tca.field.import_id">
+				<source>Import ID</source>
+				<target>Importované ID</target>
+			</trans-unit>
+			<trans-unit id="tca.field.import_source">
+				<source>Import source</source>
+				<target>Zdroj importu</target>
+			</trans-unit>
+			<trans-unit id="tca.field.synch_history">
+				<source>Synchronization history</source>
+				<target>Historie synchronizace</target>
+			</trans-unit>
+			<trans-unit id="tca.field.synch_history.type.import">
+				<source>IMPORT</source>
+				<target>IMPORT</target>
+			</trans-unit>
+			<trans-unit id="tca.field.synch_history.type.export">
+				<source>EXPORT</source>
+				<target>EXPORT</target>
+			</trans-unit>
+			<trans-unit id="tca.field.synch_history.action.join">
+				<source>Join</source>
+				<target>Propojení</target>
+			</trans-unit>
+			<trans-unit id="tca.field.synch_history.action.create">
+				<source>Create</source>
+				<target>Vytvoření</target>
+			</trans-unit>
+			<trans-unit id="tca.field.synch_history.action.update">
+				<source>Update</source>
+				<target>Aktualizace</target>
+			</trans-unit>
+			<trans-unit id="tca.field.synch_history.action.delete">
+				<source>Delete</source>
+				<target>Smazání</target>
+			</trans-unit>
+			<trans-unit id="tca.field.synch_history.action.restore">
+				<source>Restore</source>
+				<target>Obnovení</target>
+			</trans-unit>
+			
+			<trans-unit id="tca.field.email.sender">
+				<source>Sender email</source>
+				<target>E-mail odesílatele</target>
+			</trans-unit>
+			<trans-unit id="tca.field.email.sender_name">
+				<source>Sender name</source>
+				<target>Jméno odesílatele</target>
+			</trans-unit>
+			<trans-unit id="tca.field.email.recipients">
+				<source>Recipients</source>
+				<target>Příjemci</target>
+			</trans-unit>
+			<trans-unit id="tca.field.email.subject">
+				<source>Subject</source>
+				<target>Předmět</target>
+			</trans-unit>
+			<trans-unit id="tca.field.email.heading">
+				<source>Heading</source>
+				<target>Nadpis</target>
+			</trans-unit>
+			<trans-unit id="tca.field.email.text_above">
+				<source>Text above</source>
+				<target>Text nad</target>
+			</trans-unit>
+			<trans-unit id="tca.field.email.text_below">
+				<source>Text below</source>
+				<target>Text pod</target>
+			</trans-unit>
+			
+			<trans-unit id="tca.tab.params">
+				<source>Parameters</source>
+				<target>Parametry</target>
+			</trans-unit>
+			<trans-unit id="tca.tab.media">
+				<source>Media</source>
+				<target>Média</target>
+			</trans-unit>
+			<trans-unit id="tca.tab.texts">
+				<source>Texts</source>
+				<target>Texty</target>
+			</trans-unit>
+			<trans-unit id="tca.tab.relations">
+				<source>Relations</source>
+				<target>Relace</target>
+			</trans-unit>
+			<trans-unit id="tca.tab.seo">
+				<source>Seo</source>
+				<target>Seo</target>
+			</trans-unit>
+			<trans-unit id="tca.tab.synch">
+				<source>Synchronization</source>
+				<target>Synchronizace</target>
+			</trans-unit>
+			
+			<trans-unit id="tca.desc.line_separated">
+				<source>each on a new line</source>
+				<target>každý na nový řádek</target>
+			</trans-unit>
+			<trans-unit id="tca.placeholder.use_default_value">
+				<source>(use the default value)</source>
+				<target>(použít výchozí hodnotu)</target>
+			</trans-unit>
+		
+			<trans-unit id="flexform.sheet.general">
+				<source>General</source>
+				<target>Hlavní</target>
+			</trans-unit>
+			<trans-unit id="flexform.sheet.list">
+				<source>List</source>
+				<target>Výpis</target>
+			</trans-unit>
+			<trans-unit id="flexform.sheet.map">
+				<source>Map</source>
+				<target>Mapa</target>
+			</trans-unit>
+			<trans-unit id="flexform.sheet.constraints">
+				<source>Constraints</source>
+				<target>Omezení</target>
+			</trans-unit>
+			<trans-unit id="flexform.sheet.filter">
+				<source>Filter</source>
+				<target>Filtr</target>
+			</trans-unit>
+			<trans-unit id="flexform.sheet.slider">
+				<source>Slider</source>
+				<target>Slider</target>
+			</trans-unit>
+			<trans-unit id="flexform.sheet.view">
+				<source>View</source>
+				<target>Zobrazení</target>
+			</trans-unit>
+			<trans-unit id="flexform.sheet.email">
+				<source>Email</source>
+				<target>E-mail</target>
+			</trans-unit>
+			<trans-unit id="flexform.sheet.form">
+				<source>Form</source>
+				<target>Formulář</target>
+			</trans-unit>
+			
+			<trans-unit id="flexform.list_pid">
+				<source>List page</source>
+				<target>Strana výpisu</target>
+			</trans-unit>
+			<trans-unit id="flexform.detail_pid">
+				<source>Detail page</source>
+				<target>Strana detailu</target>
+			</trans-unit>
+			<trans-unit id="flexform.heading">
+				<source>Heading</source>
+				<target>Nadpis</target>
+			</trans-unit>
+			
+			<trans-unit id="flexform.list.show_pagination">
+				<source>Show pagination</source>
+				<target>Zobrazit stránkování</target>
+			</trans-unit>
+			<trans-unit id="flexform.list.items_per_page">
+				<source>Items per page</source>
+				<target>Počet záznamů na stránku</target>
+			</trans-unit>
+			<trans-unit id="flexform.list.limit">
+				<source>Limit</source>
+				<target>Limit</target>
+			</trans-unit>
+			<trans-unit id="flexform.list.sort_field">
+				<source>Sort by</source>
+				<target>Řadit dle</target>
+			</trans-unit>
+			<trans-unit id="flexform.list.sort_field.sorting">
+				<source>Sorting</source>
+				<target>Pořadí</target>
+			</trans-unit>
+			<trans-unit id="flexform.list.sort_field.crdate">
+				<source>Creation date</source>
+				<target>Datum vytvoření</target>
+			</trans-unit>
+			<trans-unit id="flexform.list.sort_dir">
+				<source>Sort direction</source>
+				<target>Směr řazení</target>
+			</trans-unit>
+			<trans-unit id="flexform.list.sort_dir.rand">
+				<source>Random</source>
+				<target>Náhodně</target>
+			</trans-unit>
+			<trans-unit id="flexform.list.group_by">
+				<source>Group by</source>
+				<target>Seskupit podle</target>
+			</trans-unit>
+			<trans-unit id="flexform.list.group_by.categories">
+				<source>Categories</source>
+				<target>Kategorie</target>
+			</trans-unit>
+			<trans-unit id="flexform.list.group_by.first_letter">
+				<source>First letter</source>
+				<target>První písmeno</target>
+			</trans-unit>
+			<trans-unit id="flexform.list.group_by_dir">
+				<source>Sort direction of groups</source>
+				<target>Řazení skupin</target>
+			</trans-unit>
+			<trans-unit id="flexform.list.empty_result_text">
+				<source>Empty result text</source>
+				<target>Text při prázdném výsledku</target>
+			</trans-unit>
+			
+			<trans-unit id="flexform.map.show">
+				<source>Show map</source>
+				<target>Zobrazit mapu</target>
+			</trans-unit>
+			<trans-unit id="flexform.map.uid">
+				<source>Selected map</source>
+				<target>Vybraná mapa</target>
+			</trans-unit>
+			<trans-unit id="flexform.map.position">
+				<source>Position</source>
+				<target>Pozice</target>
+			</trans-unit>
+			<trans-unit id="flexform.map.position.above">
+				<source>Above list</source>
+				<target>Nad výpisem</target>
+			</trans-unit>
+			<trans-unit id="flexform.map.position.below">
+				<source>Below list</source>
+				<target>Pod výpisem</target>
+			</trans-unit>
+			<trans-unit id="flexform.map.position.map_only">
+				<source>Map only</source>
+				<target>Pouze mapa</target>
+			</trans-unit>
+			<trans-unit id="flexform.map.marker.is_link">
+				<source>Marker is link</source>
+				<target>Marker je odkazem</target>
+			</trans-unit>
+			<trans-unit id="flexform.map.marker.hover_image">
+				<source>Marker image on mouse over</source>
+				<target>Obrázek markeru při najetí myší</target>
+			</trans-unit>
+			
+			<trans-unit id="flexform.filter.show">
+				<source>Show filter</source>
+				<target>Zobrazit filtr</target>
+			</trans-unit>
+			<trans-unit id="flexform.filter.pid">
+				<source>Results page</source>
+				<target>Strana s výsledky</target>
+			</trans-unit>
+			<trans-unit id="flexform.filter.items">
+				<source>Filter items</source>
+				<target>Položky filtru</target>
+			</trans-unit>
+			<trans-unit id="flexform.filter.submit_type">
+				<source>Submit type</source>
+				<target>Způsob odeslání</target>
+			</trans-unit>
+			<trans-unit id="flexform.filter.submit_type.button">
+				<source>Submit button</source>
+				<target>Odesílací tlačítko</target>
+			</trans-unit>
+			<trans-unit id="flexform.filter.submit_type.on_change">
+				<source>Automatically on change</source>
+				<target>Automaticky při změně</target>
+			</trans-unit>
+			<trans-unit id="flexform.filter.submit_button_label">
+				<source>Submit button label</source>
+				<target>Text odesílacího tlačítka</target>
+			</trans-unit>
+			
+			<trans-unit id="flexform.slider.show">
+				<source>Show slider</source>
+				<target>Zobrazit slider</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.effect">
+				<source>Effect</source>
+				<target>Efekt</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.effect.slide">
+				<source>Slide</source>
+				<target>Posunutí (slide)</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.effect.fade">
+				<source>Fade</source>
+				<target>Prolnutí (fade)</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.navigation">
+				<source>Show navigation (arrows)</source>
+				<target>Zobrazit navigaci (šipky)</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.pagination">
+				<source>Show pagination (dots)</source>
+				<target>Zobrazit stránkování (tečky)</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.autoplay">
+				<source>Enable autoplay</source>
+				<target>Povolit automatické přehrávání</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.autoplay_speed">
+				<source>Autoplay speed</source>
+				<target>Rychlost automatického přehrávání</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.transition_speed">
+				<source>Transition speed</source>
+				<target>Rychlost přechodu</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.infinite">
+				<source>Enable infinite loop</source>
+				<target>Povolit nekonečnou smyčku</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.autoheight">
+				<source>Enable automatic height</source>
+				<target>Povolit automatickou výšku</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.slide_behavior">
+				<source>Slide behavior</source>
+				<target>Chování posunu</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.slide_behavior.group">
+				<source>By group</source>
+				<target>Po skupině</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.slide_behavior.one">
+				<source>One by one</source>
+				<target>Po jednom</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.additional_configuration">
+				<source>Additional configuration</source>
+				<target>Další konfigurace</target>
+			</trans-unit>
+			
+			<trans-unit id="flexform.view.layout.list">
+				<source>List layout</source>
+				<target>Rozvržení výpisu</target>
+			</trans-unit>
+			<trans-unit id="flexform.view.layout_list.name_only">
+				<source>Name only</source>
+				<target>Pouze jméno</target>
+			</trans-unit>
+			<trans-unit id="flexform.view.layout_list.image_only">
+				<source>Image only</source>
+				<target>Pouze obrázek</target>
+			</trans-unit>
+			<trans-unit id="flexform.view.layout.detail">
+				<source>Detail layout</source>
+				<target>Rozvržení detailu</target>
+			</trans-unit>
+			<trans-unit id="flexform.view.layout_detail.image_gallery">
+				<source>Image gallery</source>
+				<target>Galerie obrázků</target>
+			</trans-unit>
+			<trans-unit id="flexform.view.layout.default">
+				<source>Default</source>
+				<target>Základní</target>
+			</trans-unit>
+			<trans-unit id="flexform.view.columns">
+				<source>Columns</source>
+				<target>Sloupce</target>
+			</trans-unit>
+			<trans-unit id="flexform.view.columns_gallery">
+				<source>Columns in gallery</source>
+				<target>Sloupce v galerii</target>
+			</trans-unit>
+			<trans-unit id="flexform.view.image_aspect_ratio">
+				<source>Image aspect ratio</source>
+				<target>Poměr stran obrázku</target>
+			</trans-unit>
+			<trans-unit id="flexform.view.image_aspect_ratio.main">
+				<source>Main image aspect ratio</source>
+				<target>Poměr stran hlavního obrázku</target>
+			</trans-unit>
+			<trans-unit id="flexform.view.image_aspect_ratio.gallery">
+				<source>Gallery images aspect ratio</source>
+				<target>Poměr stran obrázků v galerii</target>
+			</trans-unit>
+			<trans-unit id="flexform.view.image_aspect_ratio.no_image">
+				<source>No image</source>
+				<target>Bez obrázku</target>
+			</trans-unit>
+			<trans-unit id="flexform.view.image_aspect_ratio.original">
+				<source>Original</source>
+				<target>Původní</target>
+			</trans-unit>
+			
+			<trans-unit id="backend.content_info.switch_to_page">
+				<source>Switch to this page</source>
+				<target>Přepnout na tuto stránku</target>
+			</trans-unit>
+			<trans-unit id="backend.content_info.missing_record">
+				<source>Missing record</source>
+				<target>Chybějící záznam</target>
+			</trans-unit>
+			<trans-unit id="backend.content_info.plugin.restrictions">
+				<source>Record restrictions</source>
+				<target>Omezení záznamů</target>
+			</trans-unit>
+			<trans-unit id="backend.content_info.plugin.view.no_main_image">
+				<source>No main image</source>
+				<target>Bez hlavního obrázku</target>
+			</trans-unit>
+			<trans-unit id="backend.content_info.plugin.view.no_gallery_images">
+				<source>No gallery images</source>
+				<target>Bez obrázků v galerii</target>
+			</trans-unit>
+		
+			<trans-unit id="sys_param">
+				<source>Parameter</source>
+				<target>Parametr</target>
+			</trans-unit>
+			<trans-unit id="sys_param.type.text">
+				<source>Text</source>
+				<target>Text</target>
+			</trans-unit>
+			<trans-unit id="sys_param.type.number">
+				<source>Number</source>
+				<target>Číslo</target>
+			</trans-unit>
+			<trans-unit id="sys_param.type.date">
+				<source>Date</source>
+				<target>Datum</target>
+			</trans-unit>
+			<trans-unit id="sys_param.type.boolean">
+				<source>Yes / no</source>
+				<target>Ano / ne</target>
+			</trans-unit>
+			<trans-unit id="sys_param.type.options">
+				<source>Options</source>
+				<target>Možnosti</target>
+			</trans-unit>
+			<trans-unit id="sys_param.input_mode">
+				<source>Input mode</source>
+				<target>Způsob zadávání</target>
+			</trans-unit>
+			<trans-unit id="sys_param.input_mode.input">
+				<source>Input field</source>
+				<target>Vstupní pole</target>
+			</trans-unit>
+			<trans-unit id="sys_param.input_mode.textarea">
+				<source>Text area</source>
+				<target>Textová oblast</target>
+			</trans-unit>
+			<trans-unit id="sys_param.input_mode.rte">
+				<source>Rich Text Editor</source>
+				<target>Rozšířený Textový Editor</target>
+			</trans-unit>
+			<trans-unit id="sys_param.input_mode.integer">
+				<source>Integer</source>
+				<target>Celé číslo</target>
+			</trans-unit>
+			<trans-unit id="sys_param.input_mode.decimal">
+				<source>Decimal</source>
+				<target>Desetinné číslo</target>
+			</trans-unit>
+			<trans-unit id="sys_param.input_mode.date">
+				<source>Date</source>
+				<target>Datum</target>
+			</trans-unit>
+			<trans-unit id="sys_param.input_mode.datetime">
+				<source>Date and time</source>
+				<target>Datum a čas</target>
+			</trans-unit>
+			<trans-unit id="sys_param.input_mode.time">
+				<source>Time</source>
+				<target>Čas</target>
+			</trans-unit>
+			<trans-unit id="sys_param.input_mode.select">
+				<source>Drop-down menu</source>
+				<target>Rozbalovací nabídka</target>
+			</trans-unit>
+			<trans-unit id="sys_param.input_mode.multiselect">
+				<source>Multiple selection</source>
+				<target>Vícenásobný výběr</target>
+			</trans-unit>
+			<trans-unit id="sys_param.input_mode.radio">
+				<source>Radio button</source>
+				<target>Přepínač</target>
+			</trans-unit>
+			<trans-unit id="sys_param.input_mode.checkbox">
+				<source>Check boxes</source>
+				<target>Zaškrtávací políčko</target>
+			</trans-unit>
+			<trans-unit id="sys_param.options">
+				<source>Options</source>
+				<target>Možnosti</target>
+			</trans-unit>
+			<trans-unit id="sys_param.options.add_button">
+				<source>Add option</source>
+				<target>Přidat možnost</target>
+			</trans-unit>
+			<trans-unit id="sys_param.unit">
+				<source>Unit</source>
+				<target>Jednotka</target>
+			</trans-unit>
+			<trans-unit id="sys_param.default_value">
+				<source>Default value</source>
+				<target>Výchozí hodnota</target>
+			</trans-unit>
+			<trans-unit id="sys_param.default_value.add_button">
+				<source>Add default value</source>
+				<target>Přidat výchozí hodnotu</target>
+			</trans-unit>
+			
+			<trans-unit id="sys_param_group">
+				<source>Parameter group</source>
+				<target>Skupina parametrů</target>
+			</trans-unit>
+			<trans-unit id="sys_param_group.params">
+				<source>Parameters</source>
+				<target>Parametry</target>
+			</trans-unit>
+			
+			<trans-unit id="sys_param_option">
+				<source>Option</source>
+				<target>Možnost</target>
+			</trans-unit>
+			<trans-unit id="sys_param_option.is_checked">
+				<source>Is checked</source>
+				<target>Je zaškrtnutá</target>
+			</trans-unit>
+			
+			<trans-unit id="sys_param_value">
+				<source>Parameter value</source>
+				<target>Hodnota parametru</target>
+			</trans-unit>
+			<trans-unit id="sys_param_value.value">
+				<source>Value</source>
+				<target>Hodnota</target>
+			</trans-unit>
+			<trans-unit id="sys_param_value.value.empty">
+				<source>[empty value]</source>
+				<target>[žádná hodnota]</target>
+			</trans-unit>
+		
+			<trans-unit id="tt_content_filter">
+				<source>Filter item</source>
+				<target>Položka filtru</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.property">
+				<source>Property</source>
+				<target>Vlastnost</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings">
+				<source>Settings</source>
+				<target>Nastavení</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.type.date">
+				<source>Date</source>
+				<target>Datum</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.type.years">
+				<source>Years</source>
+				<target>Roky</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.form_element">
+				<source>Form element</source>
+				<target>Formulářový prvek</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.form_element.select">
+				<source>Select</source>
+				<target>Jednoduchý výběr</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.form_element.multiselect">
+				<source>Multiselect</source>
+				<target>Vícenásobný výběr</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.form_element.checkboxes">
+				<source>Checkboxes</source>
+				<target>Zaškrtávací políčka</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.form_element.radio">
+				<source>Radio</source>
+				<target>Přepínač</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.form_element.number">
+				<source>Number</source>
+				<target>Číslo</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.form_element.text">
+				<source>Input field</source>
+				<target>Vstupní pole</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.options_mode">
+				<source>Filter options</source>
+				<target>Položky ve filtru</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.options_mode.all">
+				<source>All</source>
+				<target>Všechny</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.options_mode.selected">
+				<source>Only selected</source>
+				<target>Pouze vybrané</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.options_mode.children">
+				<source>Only children</source>
+				<target>Pouze podřazené</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.fields_mode">
+				<source>Filter fields</source>
+				<target>Pole pro filtr</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.fields_mode.all">
+				<source>All</source>
+				<target>Všechna</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.fields_mode.selected">
+				<source>Only selected</source>
+				<target>Pouze vybraná</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.selected_options">
+				<source>Selected options</source>
+				<target>Vybrané položky</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.selected_fields">
+				<source>Selected fields</source>
+				<target>Vybraná pole</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.parent_option">
+				<source>Parent option</source>
+				<target>Nadřazená položka</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.default_option_label">
+				<source>Default option label</source>
+				<target>Název výchozí položky</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.use_js_plugin">
+				<source>Use javascript plugin</source>
+				<target>Použít javascriptový plugin</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.placeholder">
+				<source>Placeholder</source>
+				<target>Zástupný text</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.step">
+				<source>Step</source>
+				<target>Krok</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.range_type">
+				<source>Range type</source>
+				<target>Typ rozsahů</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.range_type.all_values">
+				<source>All values</source>
+				<target>Všechny hodnoty</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.range_type.manual">
+				<source>Manually entered</source>
+				<target>Ručně zadané</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.range_type.auto">
+				<source>Automatic</source>
+				<target>Automatické</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.range_type.above_only">
+				<source>Restricted from above only</source>
+				<target>Omezené pouze shora</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.range_type.below_only">
+				<source>Restricted from below only</source>
+				<target>Omezené pouze zdola</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.ranges">
+				<source>Ranges</source>
+				<target>Rozsahy</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.ranges.desc">
+				<source>separate numbers in the range with dashes, separate individual items with commas [example: -100,100-200,200-]</source>
+				<target>čísla v rozsahu oddělujte pomlčkami, jednotlivé položky oddělujte čárkami [příklad: -100,100-200,200-]</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.min_step">
+				<source>Min. step</source>
+				<target>Min. krok</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.max_items">
+				<source>Max. number of items</source>
+				<target>Max. počet položek</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.different_interval_boundaries">
+				<source>Different interval boundaries</source>
+				<target>Různé hranice intervalů</target>
+			</trans-unit>
+			<trans-unit id="tt_content_filter.settings.min_value">
+				<source>Min. value</source>
+				<target>Min. hodnota</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

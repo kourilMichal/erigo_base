@@ -1,0 +1,23 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"  
+	  xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
+<span class="input-group">
+	<f:if condition="{filter.availableOptions -> f:count()} == 1 && {v:iterator.first(haystack:filter.availableOptions)} == ''">
+		<f:then>
+			<f:for each="{filter.availableOptions}" as="label" key="option">
+				<f:form.checkbox name="{fieldPrefix}[{filter.item.slug}][{option}]" id="{fieldId}" value="{option}" checked="{v:condition.iterator.contains(needle:option, haystack:value, then:'true', else:'false')}" class="{filter.itemSettings.class}" />
+			</f:for>
+		</f:then>
+		<f:else>
+			<f:for each="{filter.availableOptions}" as="label" key="option">
+				<label for="{fieldId}-{option}" class="{v:condition.iterator.contains(needle:option, haystack:value, then:'active')}">
+					<f:form.checkbox name="{fieldPrefix}[{filter.item.slug}][{option}]" id="{fieldId}-{option}" value="{option}" checked="{v:condition.iterator.contains(needle:option, haystack:value, then:'true', else:'false')}" class="{filter.itemSettings.class}" />
+					<span>{label}</span>
+				</label>
+			</f:for>
+		</f:else>
+	</f:if>
+</span>
+
+</html>

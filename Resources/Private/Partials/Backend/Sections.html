@@ -1,0 +1,213 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:eb="http://typo3.org/ns/Erigo/ErigoBase/ViewHelpers" 
+      data-namespace-typo3-fluid="true">
+
+<f:section name="tableHeader">
+	<thead>
+		<tr>
+			<f:for each="{columns}" key="column" as="columnSettings">
+				<th class="col-property-{column} {f:if(condition:columnSettings.isLabelColumn, then:'col-title')} {columnSettings.class}">
+					<f:if condition="{columnSettings.sortLink}">
+						<f:then>
+							<a href="{columnSettings.sortLink}">
+								{columnSettings.label}
+								
+								<f:if condition="{columnSettings.sortIcon}">
+									<f:format.raw>{columnSettings.sortIcon}</f:format.raw>
+								</f:if>
+							</a>
+						</f:then>
+						<f:else>
+							<span class="text-muted">
+								{columnSettings.label}
+								
+								<f:if condition="{columnSettings.sortIcon}">
+									<f:format.raw>{columnSettings.sortIcon}</f:format.raw>
+								</f:if>
+							</span>
+						</f:else>
+					</f:if>
+				</th>
+			</f:for>
+			
+			<th class="col-control"></th>
+			<th class="col-localization"></th>
+		</tr>
+		
+		<f:if condition="{isFilterEnabled}">
+			<tr class="row-filter">
+				<f:for each="{columns}" key="column" as="columnSettings">
+					<th class="col-property-{column} {f:if(condition:columnSettings.isLabelColumn, then:'col-title')} {columnSettings.class}">
+						<f:if condition="{columnSettings.filter}">
+							<eb:render partial="Plugin/Filter/{columnSettings.filter.formElement -> f:format.case(mode:'capital')}" arguments="{filter:columnSettings.filter, value:'{f:if(condition:\'{filterValues.{columnSettings.property}}\', then:\'{filterValues.{columnSettings.property}.value}\')}', fieldPrefix:'filter', fieldId:'filter-field-{column}'}" />
+						</f:if>
+					</th>
+				</f:for>
+			
+				<th class="col-control">
+					<f:form.button class="btn btn-primary">
+						<f:translate key="action.filter" extensionName="ErigoBase" />
+					</f:form.button>
+				</th>
+				
+				<th class="col-localization">
+					<f:if condition="{filterValues -> f:count()} > 0">
+						<a href="{filterActionUrl}" class="btn btn-default">
+							<f:translate key="action.filter.cancel" extensionName="ErigoBase" />
+						</a>
+					</f:if>
+				</th>
+			</tr>
+		</f:if>
+	</thead>
+</f:section>
+
+<f:section name="rowActions">
+	<f:for each="{rowActions}" as="actionsGroup">
+		<f:if condition="{actionsGroup -> f:count()} > 0">
+			<div class="btn-group" role="group">
+				<f:for each="{actionsGroup}" key="action" as="actionData">
+					<f:if condition="{actionData.href} || {actionData.onclick}">
+						<f:then>
+							<a href="{f:if(condition:actionData.href, then:actionData.href, else:'#')}" title="{actionData.label}" class="btn btn-default {actionData.class}" {f:if(condition:actionData.onclick, then:'onclick="{actionData.onclick}"')} {f:if(condition:actionData.data, then:'{f:if(condition:dataKey, then:\' data-{dataKey}="{dataValue}"\')  -> f:for(each:actionData.data, key:\'dataKey\', as:\'dataValue\')}')}>
+								<f:format.raw>{actionData.icon}</f:format.raw>
+							</a>
+						</f:then>
+						<f:else>
+							<span title="{actionData.label}" class="btn btn-default {actionData.class}">
+								<f:format.raw>{actionData.icon}</f:format.raw>
+							</span>
+						</f:else>
+					</f:if>
+				</f:for>
+			</div>
+		</f:if>
+	</f:for>
+</f:section>
+
+<f:section name="rowLocalizations">
+	<f:if condition="{rowLocalizations -> f:count()} > 0">
+		<div class="btn-group" role="group">
+			<f:for each="{rowLocalizations}" key="action" as="actionData">
+				<a href="{f:if(condition:actionData.href, then:actionData.href, else:'#')}" title="{actionData.label}" class="btn btn-default {actionData.class}" {f:if(condition:actionData.onclick, then:'onclick="{actionData.onclick}"')} {f:if(condition:actionData.data, then:'{f:if(condition:dataKey, then:\' data-{dataKey}="{dataValue}"\')  -> f:for(each:actionData.data, key:\'dataKey\', as:\'dataValue\')}')}>
+					<f:format.raw>{actionData.icon}</f:format.raw>
+				</a>
+			</f:for>
+		</div>
+	</f:if>
+</f:section>
+
+<f:section name="pagination">
+	<nav class="pagination-wrap">
+		<ul class="pagination pagination-block">
+			<f:if condition="{limitItems -> f:count()} > 0">
+				<li>
+					<span>
+						<select name="limit" class="form-control input-sm paginator-input" onchange="if(this.options[this.selectedIndex].value){window.location.href=(this.options[this.selectedIndex].value);}">
+							<f:for each="{limitItems}" key="limit" as="itemLink">
+								<option value="{itemLink}" {f:if(condition:'{limit} == {pagination.limit}', then:'selected')}>{limit}</option>
+							</f:for>
+						</select>
+						
+						<f:translate key="list.limit" extensionName="ErigoBase" />
+					</span>
+				</li>
+				
+				<f:if condition="{pagination.enabled}">
+					<li class="disabled">
+						<span>
+							<span class="t3js-icon icon icon-size-small"></span>
+						</span>
+					</li>
+				</f:if>
+			</f:if>
+			
+			<f:if condition="{pagination.enabled}">
+				<f:for each="{pagination.items}" key="itemType" as="itemData">
+					<li class="{f:if(condition:'{itemData.link} || {itemData.input}', else:'disabled')}">
+						<f:if condition="{itemData.input}">
+							<f:then>
+								<span>
+									<f:format.raw>{itemData.input}</f:format.raw>
+									<span style="display:none;">
+										<f:form.button class="btn btn-primary">OK</f:form.button>
+									</span>
+								</span>
+							</f:then>
+							<f:else>
+								<f:if condition="{itemData.link}">
+									<f:then>
+										<a href="{itemData.link}" title="{itemData.label}">
+											<f:format.raw>{itemData.icon}</f:format.raw>
+										</a>
+									</f:then>
+									<f:else>
+										<span>
+											<f:format.raw>{itemData.icon}</f:format.raw>
+										</span>
+									</f:else>
+								</f:if>
+							</f:else>
+						</f:if>
+					</li>
+				</f:for>
+			</f:if>
+		</ul>
+	</nav>
+</f:section>
+
+<f:section name="columnSelector">
+	<f:if condition="{availableColumns -> f:count()} > 1">
+		<hr />
+		
+		<div class="fieldSelectBox">
+			<h3><f:translate key="list.optional_columns" extensionName="ErigoBase" /></h3>
+		
+			<f:form actionUri="{columnActionUrl}">
+				<div class="table-fit table-scrollable">
+					<table class="table table-transparent table-hover">
+						<thead>
+							<tr>
+								<th class="col-checkbox checkbox" colspan="2">
+									<label for="col-selector-all">
+										<input type="checkbox" name="check_all" class="checkbox checkAll" id="col-selector-all" value="1" />
+										<f:translate key="list.optional_columns.switch_all" extensionName="ErigoBase" />
+									</label>
+								</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							<f:for each="{availableColumns}" key="column" as="tcaSettings">
+								<f:if condition="{columns.{column}} && {columns.{column}.isLabelColumn}">
+									<f:else>
+										<tr>
+											<td class="col-checkbox">
+												<input type="checkbox" name="columns[{column}]" id="col-selector-field-{column}" value="1" class="col-selector-input" {f:if(condition:'{columns.{column}}', then:'checked')} />
+											</td>
+											<td class="col-title">
+												<label for="col-selector-field-{column}" class="label-block">
+													<f:if condition="{tcaSettings.label}">
+														<f:translate key="{tcaSettings.label}">{tcaSettings.label}</f:translate>
+													</f:if>
+													
+													<span class="text-muted text-monospace">[{column}]</span>
+												</label>
+											</td>
+										</tr>
+									</f:else>
+								</f:if>
+							</f:for>
+						</tbody>
+					</table>
+				</div>
+				
+				<f:form.button class="btn btn-default">
+					<f:translate key="action.set" extensionName="ErigoBase" />
+				</f:form.button>
+			</f:form>
+		</div>
+	</f:if>
+</f:section>
+
+</html>

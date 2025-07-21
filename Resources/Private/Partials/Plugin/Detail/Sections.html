@@ -1,0 +1,199 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers" 
+	  xmlns:eb="http://typo3.org/ns/Erigo/ErigoBase/ViewHelpers" 
+	  data-namespace-typo3-fluid="true">
+
+<f:section name="mainImage">
+	<f:if condition="{settings.view.image_aspect_ratio_main} != 'no-image'">
+		<f:if condition="{object.firstImage}">
+			<f:then>
+				<f:alias map="{file:object.firstImage}">
+				
+				<div class="plugin-main-image">
+					<figure>
+						<f:if condition="{file.link}">
+							<f:then>
+								<f:link.typolink parameter="{file.link}" title="{file.title}">
+									<eb:content.responsiveImage file="{file}" data="{contentObjectData}" pluginOptions="{extension:extension, action:'detail', layout:'{settings.view.layout_detail}', element:'{f:if(condition:element, then:element, else:\'mainImage\')}'}" />
+								</f:link.typolink>
+							</f:then>
+							<f:else>
+								<f:if condition="{settings.detail.mainImage.lightbox.enabled}">
+									<f:then>
+										<bk2k:link.lightbox
+					                        image="{file}"
+					                        maxHeight="{settings.detail.mainImage.lightbox.height}"
+					                        maxWidth="{settings.detail.mainImage.lightbox.width}"
+					                        class="lightbox"
+					                        rel="{settings.detail.mainImage.lightbox.rel}"
+					                        lightbox-title="{file.properties.title}"
+					                        lightbox-alt="{file.properties.alternative}"
+					                        lightbox-caption="{file.properties.description}"
+					                    >
+											<eb:content.responsiveImage file="{file}" data="{contentObjectData}" pluginOptions="{extension:extension, action:'detail', layout:'{settings.view.layout_detail}', element:'{f:if(condition:element, then:element, else:\'mainImage\')}'}" />
+										</bk2k:link.lightbox>
+									</f:then>
+									<f:else>
+										<eb:content.responsiveImage file="{file}" data="{contentObjectData}" pluginOptions="{extension:extension, action:'detail', layout:'{settings.view.layout_detail}', element:'{f:if(condition:element, then:element, else:\'mainImage\')}'}" />
+									</f:else>
+								</f:if>
+							</f:else>
+						</f:if>
+					</figure>
+				</div>
+				
+				</f:alias>
+			</f:then>
+			<f:else>
+				<f:if condition="{settings.detail.showEmptyImage}">
+					<div class="plugin-main-image">
+						<figure class="empty-image">
+							<eb:content.responsiveImage src="{emptyImageSrc}" data="{contentObjectData}" pluginOptions="{extension:extension, action:'detail', layout:'{settings.view.layout_detail}', element:'{f:if(condition:element, then:element, else:\'mainImage\')}'}" />
+						</figure>
+					</div>
+				</f:if>
+			</f:else>
+		</f:if>
+	</f:if>
+</f:section>
+
+<f:section name="mainImagesGallery">
+	<f:if condition="{object.images -> f:count()} > 0">
+		<div class="big-image-wrapper">
+			<div class="plugin-main-image">
+				<f:for each="{eb:content.responsiveImages(files:object.images.array, data:contentObjectData, return:'true', pluginOptions:'{extension:extension, action:\'detail\', layout:\'{settings.view.layout_detail}\', element:\'{f:if(condition:element, then:element, else:\\\'mainImage\\\')}\'}')}" as="fileData">
+					<div class="big-image" data-width="{fileData.file.originalFile.properties.width}" data-height="{fileData.file.originalFile.properties.height}">
+						<eb:content.responsiveImage variants="{0:{file:fileData.file, variants:fileData.variants}}" />
+					</div>
+				</f:for>
+			</div>
+		</div>
+	</f:if>
+</f:section>
+
+<f:section name="title">
+	<{f:if(condition:tag, then:tag, else:settings.detail.titleTag)}>
+		{object.title}
+	</{f:if(condition:tag, then:tag, else:settings.detail.titleTag)}>
+</f:section>
+
+<f:section name="text">
+	<f:if condition="{object.text}">
+		<div class="plugin-text">
+			<f:format.html>{object.text}</f:format.html>
+		</div>
+	</f:if>
+</f:section>
+
+<f:section name="mediaGallery">
+	<f:if condition="{settings.view.image_aspect_ratio_gallery} != 'no-image'">
+		<f:if condition="{settings.detail.mainImage.showInGallery}">
+			<f:then>
+				<f:if condition="{object.images -> f:count()} > 0">
+					<div class="plugin-media-gallery">
+						<f:for each="{eb:content.responsiveImages(files:object.images.array, data:contentObjectData, return:'true', pluginOptions:'{extension:extension, action:\'detail\', layout:\'{settings.view.layout_detail}\', element:\'{f:if(condition:element, then:element, else:\\\'gallery\\\')}\', columns:\'{settings.view.columns_gallery}\'}')}" as="fileData">
+							<f:render section="mediaGalleryImage" arguments="{file:fileData.file, variants:fileData.variants, settings:settings}" />
+						</f:for>
+					</div>
+				</f:if>
+			</f:then>
+			<f:else>
+				<f:if condition="{object.galleryImages -> f:count()} > 0">
+					<div class="plugin-media-gallery">
+						<f:for each="{eb:content.responsiveImages(files:object.galleryImages.array, data:contentObjectData, return:'true', pluginOptions:'{extension:extension, action:\'detail\', layout:\'{settings.view.layout_detail}\', element:\'{f:if(condition:element, then:element, else:\\\'gallery\\\')}\', columns:\'{settings.view.columns_gallery}\'}')}" as="fileData">
+							<f:render section="mediaGalleryImage" arguments="{file:fileData.file, variants:fileData.variants, settings:settings}" />
+						</f:for>
+					</div>
+				</f:if>
+			</f:else>
+		</f:if>
+	</f:if>
+</f:section>
+
+<f:section name="mediaGalleryImage">
+	<div class="plugin-media-image">
+		<figure>
+			<f:if condition="{file.properties.link}">
+				<f:then>
+					<f:link.typolink parameter="{file.properties.link}" title="{file.properties.title}">
+						<eb:content.responsiveImage variants="{0:{file:file, variants:variants}}" />
+					</f:link.typolink>
+				</f:then>
+				<f:else>
+					<f:if condition="{settings.detail.lightbox.enabled} && {settings.view.layout_detail} != 'image_gallery'">
+						<f:then>
+							<bk2k:link.lightbox
+		                        image="{file}"
+		                        maxHeight="{settings.detail.lightbox.height}"
+		                        maxWidth="{settings.detail.lightbox.width}"
+		                        class="lightbox"
+		                        rel="{settings.detail.lightbox.rel}"
+		                        lightbox-title="{file.properties.title}"
+		                        lightbox-alt="{file.properties.alternative}"
+		                        lightbox-caption="{file.properties.description}"
+		                    >
+								<eb:content.responsiveImage variants="{0:{file:file, variants:variants}}" />
+							</bk2k:link.lightbox>
+						</f:then>
+						<f:else>
+							<eb:content.responsiveImage variants="{0:{file:file, variants:variants}}" />
+						</f:else>
+					</f:if>
+				</f:else>
+			</f:if>
+			
+			<f:if condition="{file.properties.description}">
+				<figcaption><f:format.nl2br>{file.properties.description}</f:format.nl2br></figcaption>
+			</f:if>
+		</figure>
+	</div>
+</f:section>
+
+<f:section name="files">
+	<f:if condition="{object.files -> f:count()} > 0">
+		<ul class="plugin-files">
+			<f:for each="{object.files}" as="fileReference">
+				<li class="plugin-file">
+					<f:render section="file" arguments="{fileReference:fileReference, showSize:showSize}" />
+				</li>
+			</f:for>
+		</ul>
+	</f:if>
+</f:section>
+
+<f:section name="file">
+	<a href="{fileReference.originalResource.publicUrl}" class="file-ext-{fileReference.originalResource.extension}" target="_blank">
+		<span>
+			<f:if condition="{fileReference.originalResource.title}">
+				<f:then>
+					{fileReference.originalResource.title}
+				</f:then>
+				<f:else>
+					{fileReference.originalResource.name}
+				</f:else>
+			</f:if>
+		</span>
+		
+		<f:if condition="{showSize}">
+			<em>{fileReference.originalResource.size -> f:format.bytes()}</em>
+		</f:if>
+	</a>
+</f:section>
+
+<f:section name="videoGallery">
+	<f:if condition="{object.videos -> f:count()} > 0">
+		<div class="plugin-video-gallery">
+			<f:for each="{object.videos}" as="video">
+				<div class="plugin-media-video">
+					<figure class="video">
+						<div class="embed embed-responsive embed-responsive-16by9">
+							<f:media class="embed-responsive-item" file="{video}" alt="{video.properties.alternative}" title="{video.properties.title}" />
+						</div>
+					</figure>
+				</div>
+			</f:for>
+		</div>
+	</f:if>
+</f:section>
+
+</html>

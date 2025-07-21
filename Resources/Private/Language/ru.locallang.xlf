@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="ru" datatype="plaintext" original="messages" date="2022-04-14T15:55:55Z" product-name="erigo_base">
+		<header/>
+		<body>
+			<trans-unit id="more_link">
+				<source>Read more</source>
+				<target>Читать подробнее</target>
+			</trans-unit>
+			
+			<trans-unit id="action.back">
+				<source>Back</source>
+				<target>Вернуться</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

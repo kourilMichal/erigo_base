@@ -1,0 +1,14 @@
+# customcategory=params=Params
+
+
+############
+## Params ##
+############
+
+params {
+	# cat=params//10; type=options[Global=global, Site=site]; label=Slug scope
+	slugScope = site
+	
+	# cat=params//20; type=boolean; label=Only parameters with the same PID are available
+	samePidOnly = 0
+}

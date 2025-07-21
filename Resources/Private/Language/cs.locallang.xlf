@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="cs" datatype="plaintext" original="messages" date="2022-04-14T15:55:55Z" product-name="erigo_base">
+		<header/>
+		<body>
+			<trans-unit id="more_link">
+				<source>Read more</source>
+				<target>Číst více</target>
+			</trans-unit>
+			<trans-unit id="detail_link">
+				<source>Detail</source>
+				<target>Detail</target>
+			</trans-unit>
+			
+			<trans-unit id="action.filter">
+				<source>Filter</source>
+				<target>Filtrovat</target>
+			</trans-unit>
+			<trans-unit id="action.filter.cancel">
+				<source>Cancel filter</source>
+				<target>Zrušit filtr</target>
+			</trans-unit>
+			<trans-unit id="action.send">
+				<source>Send</source>
+				<target>Odeslat</target>
+			</trans-unit>
+			<trans-unit id="action.save">
+				<source>Save</source>
+				<target>Uložit</target>
+			</trans-unit>
+			<trans-unit id="action.set">
+				<source>Set</source>
+				<target>Nastavit</target>
+			</trans-unit>
+			<trans-unit id="action.update">
+				<source>Update</source>
+				<target>Aktualizovat</target>
+			</trans-unit>
+			<trans-unit id="action.cancel">
+				<source>Cancel</source>
+				<target>Zrušit</target>
+			</trans-unit>
+			<trans-unit id="action.add">
+				<source>Add</source>
+				<target>Přidat</target>
+			</trans-unit>
+			<trans-unit id="action.edit">
+				<source>Edit</source>
+				<target>Upravit</target>
+			</trans-unit>
+			<trans-unit id="action.remove">
+				<source>Remove</source>
+				<target>Odstranit</target>
+			</trans-unit>
+			<trans-unit id="action.back">
+				<source>Back</source>
+				<target>Zpět</target>
+			</trans-unit>
+			
+			<trans-unit id="list.total_count">
+				<source>Total records: %s</source>
+				<target>Celkem záznamů: %s</target>
+			</trans-unit>
+			<trans-unit id="list.limit">
+				<source>per page</source>
+				<target>na stranu</target>
+			</trans-unit>
+			<trans-unit id="list.no_items">
+				<source>No record found.</source>
+				<target>Nebyl nalezen žádný záznam.</target>
+			</trans-unit>
+			<trans-unit id="list.optional_columns">
+				<source>Optional columns</source>
+				<target>Volitelné sloupce</target>
+			</trans-unit>
+			<trans-unit id="list.optional_columns.switch_all">
+				<source>Switch all</source>
+				<target>Přepnout všechny</target>
+			</trans-unit>
+			
+			<trans-unit id="form.validation.error">
+				<source>The form contains errors. Please check the entered data.</source>
+				<target>Formulář obsahuje chyby. Zkontrolujte prosím zadané údaje.</target>
+			</trans-unit>
+			<trans-unit id="form.ajax.error">
+				<source>An error occurred while submitting the form. Details were listed in the console.</source>
+				<target>Při odeslání formuláře došlo k chybě. Podrobnosti byly vypsány do konzole.</target>
+			</trans-unit>
+			<trans-unit id="form.antispam.error">
+				<source>The form did not pass antispam control. Please refresh the page and resubmit the form.</source>
+				<target>Formulář neprošel antispam kontrolou. Prosím, obnovte stranu a odešlete formulář znovu.</target>
+			</trans-unit>
+			
+			<trans-unit id="filter.range.from">
+				<source>from</source>
+				<target>od</target>
+			</trans-unit>
+			<trans-unit id="filter.range.to">
+				<source>to</source>
+				<target>do</target>
+			</trans-unit>
+			<trans-unit id="filter.range.above_only">
+				<source>up to %s</source>
+				<target>do %s</target>
+			</trans-unit>
+			<trans-unit id="filter.range.below_only">
+				<source>from %s</source>
+				<target>od %s</target>
+			</trans-unit>
+			<trans-unit id="filter.range.suffix_less">
+				<source>%s and less</source>
+				<target>%s a méně</target>
+			</trans-unit>
+			<trans-unit id="filter.range.suffix_more">
+				<source>%s and more</source>
+				<target>%s a více</target>
+			</trans-unit>
+			
+			<trans-unit id="js.modal.confirm.title">
+				<source>Please confirm</source>
+				<target>Potvrďte prosím</target>
+			</trans-unit>
+			<trans-unit id="js.modal.confirm.cancel">
+				<source>Cancel</source>
+				<target>Zrušit</target>
+			</trans-unit>
+			<trans-unit id="js.modal.confirm.ok">
+				<source>OK</source>
+				<target>OK</target>
+			</trans-unit>
+			
+			<trans-unit id="email.exceptions.file_line">
+				<source>in %s, on line %s</source>
+				<target>v souboru %s, na řádku %s</target>
+			</trans-unit>
+			
+			<trans-unit id="task.error.email_subject">
+				<source>Task failure: %s — %s</source>
+				<target>Chyba úlohy: %s — %s</target>
+			</trans-unit>
+			<trans-unit id="task.transfer.error.email_subject">
+				<source>Sync failure: %s — %s</source>
+				<target>Chyba synchronizace: %s — %s</target>
+			</trans-unit>
+			<trans-unit id="task.transfer.error.message">
+				<source>An error occurred while running the job. Detail information was sent by email.</source>
+				<target>Při spuštění úlohy došlo k chybě. Podrobné informace byly zaslány e-mailem.</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

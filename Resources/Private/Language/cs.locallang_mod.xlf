@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="cs" datatype="plaintext" original="messages" date="2020-09-02T18:09:48Z" product-name="erigo_base">
+		<header/>
+		<body>
+			<trans-unit id="list.item_type.all">
+				<source>[all]</source>
+				<target>[vše]</target>
+			</trans-unit>
+			
+			<trans-unit id="error.no_pid">
+				<source>No allowed page is set.</source>
+				<target>Není nastavena žádná povolená strana.</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

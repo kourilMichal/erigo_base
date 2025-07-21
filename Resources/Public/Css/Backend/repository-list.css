@@ -1,0 +1,79 @@
+/*
+ * Repository list
+ */
+
+.repository-list table .row-filter th {
+	vertical-align: top !important;
+	font-weight: normal !important;
+	padding-top: 8px !important;
+	padding-bottom: 8px !important;
+}
+
+.repository-list table .row-filter .form-control {
+	max-width: 300px !important;
+}
+
+.repository-list table .row-filter select {
+	min-width: 200px !important;
+	min-height: 96px !important;
+}
+
+.repository-list table .row-filter .input-value-range .input-group {
+	margin-bottom: 8px !important;
+}
+
+.repository-list table .row-filter .input-value-range input {
+	width: auto !important;
+	display: inline !important;
+	float: none !important;
+}
+
+.repository-list table tbody td {
+	white-space: normal !important;
+}
+
+.repository-list table tfoot .col-control {
+	white-space: normal !important;
+	min-width: 12em;
+}
+
+
+/*
+ * Tree list
+ */
+
+.repository-tree-list .tree-level-2 .col-title {
+	padding-left: 26px;
+}
+
+.repository-tree-list .tree-level-3 .col-title {
+	padding-left: 46px;
+}
+
+.repository-tree-list .tree-level-4 .col-title {
+	padding-left: 66px;
+}
+
+.repository-tree-list .tree-level-5 .col-title {
+	padding-left: 86px;
+}
+
+.repository-tree-list .tree-level-6 .col-title {
+	padding-left: 106px;
+}
+
+.repository-tree-list .tree-level-7 .col-title {
+	padding-left: 126px;
+}
+
+.repository-tree-list .tree-level-8 .col-title {
+	padding-left: 146px;
+}
+
+.repository-tree-list .tree-level-9 .col-title {
+	padding-left: 166px;
+}
+
+.repository-tree-list .added-parent * {
+	color: #bbb !important;
+}

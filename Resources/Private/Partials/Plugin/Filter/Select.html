@@ -1,0 +1,15 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"  
+	  xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	  xmlns:eb="http://typo3.org/ns/Erigo/ErigoBase/ViewHelpers" 
+	  data-namespace-typo3-fluid="true">
+
+<f:if condition="{filter.itemSettings.useJsPlugin}">
+	<f:then>
+		<eb:plugin.filter.select name="{fieldPrefix}[{filter.item.slug}]" slug="{filter.item.slug}" id="{fieldId}" options="{filter.availableOptions}" constraints="{filter.constraints}" value="{value}" prependOptionLabel="{filter.defaultOptionLabel}" prependOptionValue="" data="{placeholder:'{v:or(content:filter.itemSettings.placeholder, alternative:\' \')}'}" class="use-js-plugin {filter.itemSettings.class}" />
+	</f:then>
+	<f:else>
+		<eb:plugin.filter.select name="{fieldPrefix}[{filter.item.slug}]" slug="{filter.item.slug}" id="{fieldId}" options="{filter.availableOptions}" constraints="{filter.constraints}" value="{value}" prependOptionLabel="{filter.defaultOptionLabel}" prependOptionValue="" class="{filter.itemSettings.class}" />
+	</f:else>
+</f:if>
+
+</html>

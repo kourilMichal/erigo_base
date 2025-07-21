@@ -1,0 +1,68 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:eb="http://typo3.org/ns/Erigo/ErigoBase/ViewHelpers" 
+	  data-namespace-typo3-fluid="true">
+
+<f:section name="mainImage">
+	<f:if condition="{settings.view.image_aspect_ratio_main} != 'no-image'">
+		<div class="plugin-main-image">
+			<f:if condition="{object.firstImage}">
+				<f:then>
+					<f:if condition="{detailUrl}">
+						<f:then>
+							<a href="{detailUrl}" class="{class}">
+								<eb:content.responsiveImage file="{object.firstImage}" data="{contentObjectData}" pluginOptions="{extension:extension, action:'list', layout:'{settings.view.layout_list}', columns:'{settings.view.columns}', element:'{f:if(condition:element, then:element, else:\'mainImage\')}'}" />
+							</a>
+						</f:then>
+						<f:else>
+							<eb:content.responsiveImage file="{object.firstImage}" data="{contentObjectData}" pluginOptions="{extension:extension, action:'list', layout:'{settings.view.layout_list}', columns:'{settings.view.columns}', element:'{f:if(condition:element, then:element, else:\'mainImage\')}'}" />
+						</f:else>
+					</f:if>
+				</f:then>
+				<f:else>
+					<span class="empty-image">
+						<f:if condition="{detailUrl}">
+							<f:then>
+								<a href="{detailUrl}" class="{class}">
+									<eb:content.responsiveImage src="{emptyImageSrc}" data="{contentObjectData}" pluginOptions="{extension:extension, action:'list', layout:'{settings.view.layout_list}', columns:'{settings.view.columns}', element:'{f:if(condition:element, then:element, else:\'mainImage\')}'}" />
+								</a>
+							</f:then>
+							<f:else>
+								<eb:content.responsiveImage src="{emptyImageSrc}" data="{contentObjectData}" pluginOptions="{extension:extension, action:'list', layout:'{settings.view.layout_list}', columns:'{settings.view.columns}', element:'{f:if(condition:element, then:element, else:\'mainImage\')}'}" />
+							</f:else>
+						</f:if>
+					</span>
+				</f:else>
+			</f:if>
+		</div>
+	</f:if>
+</f:section>
+
+<f:section name="title">
+	<{f:if(condition:tag, then:tag, else:settings.list.titleTag)}>
+		<f:if condition="{detailUrl}">
+			<f:then>
+				<a href="{detailUrl}" class="{class}">
+					{object.title}
+				</a>
+			</f:then>
+			<f:else>
+				{object.title}
+			</f:else>
+		</f:if>
+	</{f:if(condition:tag, then:tag, else:settings.list.titleTag)}>
+</f:section>
+
+<f:section name="moreLink">
+	<f:if condition="{detailUrl}">
+		<div class="plugin-more-link">
+			<a href="{detailUrl}" class="{class}">
+				<f:if condition="{label}">
+					<f:then>{label}</f:then>
+					<f:else><f:translate key="more_link" extensionName="erigo_base" /></f:else>
+				</f:if>
+			</a>
+		</div>
+	</f:if>
+</f:section>
+
+</html>

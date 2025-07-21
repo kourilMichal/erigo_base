@@ -1,0 +1,104 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:eb="http://typo3.org/ns/Erigo/ErigoBase/ViewHelpers" 
+      data-namespace-typo3-fluid="true">
+
+<div class="repository-list">
+	<h1>{pageTitle}</h1>
+	
+	<f:flashMessages queueIdentifier="{fmqId}" />
+	
+	<f:if condition="{columns -> f:count()} > 0">
+		<f:if condition="{isFilterEnabled} || {pagination.enabled}">
+			<f:then>
+				<f:form actionUri="{filterActionUrl}">
+					<f:render section="table" arguments="{_all}" />
+				</f:form>
+			</f:then>
+			<f:else>
+				<f:render section="table" arguments="{_all}" />
+			</f:else>
+		</f:if>
+		
+		<eb:render partial="Backend/Sections" section="columnSelector" arguments="{_all}" />
+	</f:if>
+</div>
+
+
+<f:section name="table">
+	<div class="table-fit">
+		<table class="table table-striped table-hover">
+			<eb:render partial="Backend/Sections" section="tableHeader" arguments="{_all}" />
+				
+			<tbody>
+				<f:if condition="{rows -> f:count()} > 0">
+					<f:then>
+						<f:for each="{rows}" as="row">
+							<tr class="{row._class}">
+								<f:for each="{columns}" key="column" as="columnSettings">
+									<f:if condition="{columnSettings.isLabelColumn}">
+										<f:then>
+											<td class="col-property-{column} col-title {columnSettings.class}">
+												<f:if condition="{row._actions.firstGroup.edit}">
+													<f:then>
+														<f:alias map="{editAction:row._actions.firstGroup.edit}">
+															<a href="{f:if(condition:editAction.href, then:editAction.href, else:'#')}" {f:if(condition:editAction.onclick, then:'onclick="{editAction.onclick}"')}>
+																<f:format.raw>{row.{column}}</f:format.raw>
+															</a>
+														</f:alias>
+													</f:then>
+													<f:else>
+														<f:format.raw>{row.{column}}</f:format.raw>
+													</f:else>
+												</f:if>
+											</td>
+										</f:then>
+										<f:else>
+											<td class="col-property-{column} {columnSettings.class}">
+												<f:format.raw>{row.{column}}</f:format.raw>
+											</td>
+										</f:else>
+									</f:if>
+									
+								</f:for>
+		
+								<td class="col-control nowrap">
+									<eb:render partial="Backend/Sections" section="rowActions" arguments="{rowActions:row._actions}" />
+								</td>
+								
+								<td class="col-localization nowrap text-center">
+									<eb:render partial="Backend/Sections" section="rowLocalizations" arguments="{rowLocalizations:row._localizations}" />
+								</td>
+							</tr>
+						</f:for>
+					</f:then>
+					<f:else>
+						<tr>
+							<td colspan="{columns -> f:count()}" class="col-title">
+								<f:translate key="list.no_items" extensionName="ErigoBase" />
+							</td>
+							
+							<td class="col-control"></td>
+							<td class="col-localization"></td>
+						</tr>
+					</f:else>
+				</f:if>
+			</tbody>
+	
+			<f:if condition="{pagination.totalCount} > 0">
+				<tfoot>
+					<tr>
+						<td colspan="{columns -> f:count()}" class="col-title">
+							<eb:render partial="Backend/Sections" section="pagination" arguments="{pagination:pagination, limitItems:limitItems}" />
+						</td>
+						
+						<td class="col-control" colspan="2">
+							<strong><f:translate key="list.total_count" extensionName="ErigoBase" arguments="{0:pagination.totalCount}" /></strong>
+						</td>
+					</tr>
+				</tfoot>
+			</f:if>
+		</table>
+	</div>
+</f:section>
+
+</html>

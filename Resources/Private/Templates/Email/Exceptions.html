@@ -1,0 +1,53 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Empty" />
+
+<f:section name="content">
+	<f:for each="{exceptions}" as="exception">
+		<table width="800" cellpadding="20" cellspacing="0" border="0" bgcolor="{scss.white}"><tr><td valign="top" style="padding:20px;">
+			<h1 style="color:{scss.primary}; margin:0; font-size:23px;">{exception.heading}</h1>
+		</td></tr></table>
+		
+		<table width="800" cellpadding="20" cellspacing="0" border="0" bgcolor="{scss.light}"><tr><td valign="top" style="padding:20px;">
+			<div>
+				<strong style="color:{scss.gray-500}; margin-right:3px; font-size:12px;">[{exception.code}]</strong>
+				<strong style="color:{scss.red}; font-size:18px;">{exception.message}</strong>
+			</div>
+			
+			<f:if condition="{exception.params -> f:count()} > 0">
+				<f:for each="{exception.params}" key="paramName" as="paramValue">
+					<div style="margin-top:20px;">
+						<div><strong>{paramName}:</strong></div>
+						
+						<f:if condition="{paramValue}">
+							<pre style="margin-top:5px; margin-bottom:0; padding:10px 15px; background-color:{scss.gray-200}; color:{scss.gray-800}; font-size:12px;">{paramValue}</pre>
+						</f:if>
+					</div>
+				</f:for>
+			</f:if>
+			
+			<div style="margin-top:20px;">
+				<span style="font-size:12px;">
+					<f:translate key="email.exceptions.file_line" extensionName="ErigoBase" arguments="{0:exception.file, 1:exception.line}" />
+				</span>
+			</div>
+			
+			<f:if condition="{includeTrace} && {exception.trace}">
+				<div style="margin-top:20px;">
+					<span style="color:{scss.gray-500}; font-size:12px;">
+						<f:for each="{exception.trace}" as="traceLine" iteration="traceIterator">
+							{traceLine} <f:if condition="{traceIterator.isLast}"><f:else><br /></f:else></f:if>
+						</f:for>
+					</span>
+				</div>
+			</f:if>
+		</td></tr></table>
+		
+		<table width="800" cellpadding="10" cellspacing="0" border="0" bgcolor="{scss.white}"><tr><td valign="top" style="padding:10px;">
+			&nbsp;
+		</td></tr></table>
+	</f:for>
+</f:section>
+
+</html>

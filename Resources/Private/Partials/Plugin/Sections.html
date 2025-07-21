@@ -1,0 +1,44 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:eb="http://typo3.org/ns/Erigo/ErigoBase/ViewHelpers" 
+	  data-namespace-typo3-fluid="true">
+
+<f:section name="subtitle">
+	<f:if condition="{object.subtitle}">
+		<div class="plugin-subtitle">
+			{object.subtitle}
+		</div>
+	</f:if>
+</f:section>
+
+<f:section name="categories">
+	<f:if condition="{object.categories -> f:count()} > 0">
+		<div class="plugin-categories">
+			<ul class="li-menu">
+				<f:for each="{object.categories}" as="category" iteration="iterator">
+					<li class="plugin-category category-{category.uid} li-menu-item">
+						<f:if condition="{category.shortcut}">
+							<f:then>
+								<f:link.typolink parameter="{category.shortcut}">
+									{category.title}
+								</f:link.typolink>
+							</f:then>
+							<f:else>
+								{category.title}
+							</f:else>
+						</f:if>
+					</li>
+				</f:for>
+			</ul>
+		</div>
+	</f:if>
+</f:section>
+
+<f:section name="perex">
+	<f:if condition="{object.perex}">
+		<div class="plugin-perex">
+			<f:format.nl2br>{object.perex}</f:format.nl2br>
+		</div>
+	</f:if>
+</f:section>
+
+</html>

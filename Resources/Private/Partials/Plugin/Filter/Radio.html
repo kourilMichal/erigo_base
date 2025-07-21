@@ -1,0 +1,14 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"  
+	  xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
+<span class="input-group">
+	<f:for each="{filter.availableOptions}" as="label" key="option">
+		<label for="{fieldId}-{option}" class="{v:condition.iterator.contains(needle:option, haystack:value, then:'active')}">
+			<f:form.radio name="{fieldPrefix}[{filter.item.slug}]" id="{fieldId}-{option}" value="{option}" checked="{v:condition.iterator.contains(needle:option, haystack:value, then:'true', else:'false')}" class="{filter.itemSettings.class}" />
+			<span>{label}</span>
+		</label>
+	</f:for>
+</span>
+
+</html>

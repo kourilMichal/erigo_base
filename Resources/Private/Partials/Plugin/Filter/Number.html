@@ -1,0 +1,43 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"  
+	  xmlns:eb="http://typo3.org/ns/Erigo/ErigoBase/ViewHelpers" 
+	  data-namespace-typo3-fluid="true">
+
+<span class="input-group input-value-range">
+	<span class="input-group">
+		<f:if condition="{filter.itemSettings.showRangeTexts}">
+			<span class="input-group-prepend">
+				<span class="input-group-text"><f:translate key="filter.range.from" extensionName="ErigoBase" /></span>
+			</span>
+		</f:if>
+	
+		<eb:form.number name="{fieldPrefix}[{filter.item.slug}][from]" id="{fieldId}" value="{value.from}" step="{filter.itemSettings.step}" class="{filter.itemSettings.class}" />
+		
+		<f:if condition="{filter.unit}">
+			<span class="input-group-append">
+				<span class="input-group-text">{filter.unit}</span>
+			</span>
+		</f:if>
+	</span>
+	
+	<f:if condition="{filter.itemSettings.showRangeSeparator}">
+		<span class="input-separator">-</span>
+	</f:if>
+	
+	<span class="input-group">
+		<f:if condition="{filter.itemSettings.showRangeTexts}">
+			<span class="input-group-prepend">
+				<span class="input-group-text"><f:translate key="filter.range.to" extensionName="ErigoBase" /></span>
+			</span>
+		</f:if>
+		
+		<eb:form.number name="{fieldPrefix}[{filter.item.slug}][to]" id="{fieldId}-to" value="{value.to}" step="{filter.itemSettings.step}" class="{filter.itemSettings.class}" />
+		
+		<f:if condition="{filter.unit}">
+			<span class="input-group-append">
+				<span class="input-group-text">{filter.unit}</span>
+			</span>
+		</f:if>
+	</span>
+</span>
+
+</html>
